@@ -5,18 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f2e9">
   <meta name="color-scheme" content="light dark">
+  <script>
+    /* Apply the saved theme before the stylesheet paints, with safe fallbacks for file:// previews. */
+    (function () {
+      var root = document.documentElement;
+      var preference = "system";
+      try {
+        var saved = localStorage.getItem("hidayeti-theme-preference");
+        if (saved === "dark" || saved === "light") preference = saved;
+      } catch (error) { /* Storage may be unavailable for local files; system mode still works. */ }
+      var prefersDark = !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      var theme = preference === "system" ? (prefersDark ? "dark" : "light") : preference;
+      root.setAttribute("data-theme-mode", preference);
+      root.setAttribute("data-theme", theme);
+      root.style.colorScheme = theme;
+    }());
+  </script>
   <meta name="description" content="Hidayeti Prinç Basmati pirinç ürünlerini keşfedin. 5 kg ve 10 kg ürün seçenekleri hakkında bilgi ve fiyat için WhatsApp'tan bize ulaşın.">
   <meta name="robots" content="index,follow">
   <title>Hidayeti Prinç | Basmati Pirinç Ürünleri</title>
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
   <link rel="preload" href="assets/hero-rice.svg" as="image" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=1.3">
+  <link id="siteStylesheet" rel="stylesheet" href="./styles.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Hidayeti Prinç | Basmati Pirinç Ürünleri">
   <meta property="og:description" content="Hidayeti Prinç Basmati pirinç ürünlerini keşfedin. Ürün bilgisi ve fiyat için WhatsApp üzerinden iletişime geçin.">
   <!-- Add the canonical URL and hreflang links after the production domain and URL structure are confirmed. -->
 </head>
 <body>
+  <div id="cssLoadWarning" role="alert" style="display:none;position:fixed;z-index:99999;top:12px;left:12px;right:12px;padding:14px 18px;border-radius:10px;background:#8c2330;color:#fff;font:600 14px/1.5 system-ui,sans-serif;box-shadow:0 8px 28px #0004;">Tasarım dosyası (styles.css) yüklenemedi. ZIP dosyasının tamamını bir klasöre çıkarın ve index.html dosyasını styles.css ile aynı klasörden açın. / The stylesheet could not be loaded. Extract the complete ZIP and keep index.html beside styles.css.</div>
   <a class="skip-link" href="#main" data-i18n="skip">İçeriğe geç</a>
   <header class="site-header" id="top">
     <div class="header-inner wrap">
@@ -27,11 +44,16 @@
       <nav class="desktop-nav" aria-label="Ana menü">
         <a href="#products" data-i18n="navProducts">Ürünlerimiz</a>
         <a href="#about" data-i18n="navAbout">Hakkımızda</a>
+        <a href="#faq" data-i18n="navFaq">SSS</a>
         <a href="#contact" data-i18n="navContact">İletişim</a>
       </nav>
       <div class="header-actions">
         <button class="language-switch" id="languageToggle" type="button" aria-label="Switch to English">
           <span class="flag" aria-hidden="true">🇺🇸</span><span id="languageLabel">English</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Koyu temaya geç" title="Koyu temaya geç" aria-pressed="false">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.7 8.7 0 0 1 8.9 3.8 8.8 8.8 0 1 0 20.2 15.1Z"></path></svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.2M12 19.8V22M4.93 4.93l1.56 1.56m11.02 11.02 1.56 1.56M2 12h2.2m15.6 0H22M4.93 19.07l1.56-1.56M17.51 6.49l1.56-1.56"></path></svg>
         </button>
         <a class="header-whatsapp general-whatsapp" href="https://wa.me/905344641463?text=Merhaba%2C%20Hidayeti%20Prin%C3%A7%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" data-i18n="headerWhatsapp">WhatsApp <span aria-hidden="true">↗</span></a>
         <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Menüyü aç">
@@ -42,6 +64,7 @@
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobil menü" hidden>
       <a href="#products" data-i18n="navProducts">Ürünlerimiz</a>
       <a href="#about" data-i18n="navAbout">Hakkımızda</a>
+      <a href="#faq" data-i18n="navFaq">SSS</a>
       <a href="#contact" data-i18n="navContact">İletişim</a>
       <a href="https://wa.me/905344641463?text=Merhaba%2C%20Hidayeti%20Prin%C3%A7%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="general-whatsapp" data-i18n="mobileWhatsapp">WhatsApp üzerinden ulaşın ↗</a>
     </nav>
@@ -200,15 +223,15 @@
             <div class="brand-card-top"><span data-i18n="brandCardLabel">HİDAYETİ PRİNÇ</span><span aria-hidden="true">✳</span></div>
             <img src="assets/logo.svg" alt="Hidayeti Prinç sembolü" width="86" height="86">
             <p data-i18n="brandCardLine">Basmati pirinç ürünleri</p>
-            <span class="brand-card-bottom" data-i18n="brandCardBottom">MARKA HİKÂYESİ BURADA</span>
+            <span class="brand-card-bottom" data-i18n="brandCardBottom">BASMATİ · 5 KG / 10 KG</span>
           </div>
           <div class="decorative-grain grain-a" aria-hidden="true"></div><div class="decorative-grain grain-b" aria-hidden="true"></div>
         </div>
         <div class="brand-copy-main">
           <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="aboutEyebrow">MARKAMIZ</span></div>
           <h2 data-i18n="aboutTitle">Hidayeti Prinç'i <em>tanıyın.</em></h2>
-          <p class="brand-lead" data-i18n="aboutLead">Basmati pirinç ürünlerimizi keşfedin; ihtiyacınıza uygun paket seçeneği için bizimle iletişime geçin.</p>
-          <p class="brand-body" data-i18n="aboutBody">Bu alan, işletmenizin gerçek hikâyesi, üretim yaklaşımı ve ürünleri hakkında sağlayacağınız bilgilerle güncellenecek. Yayına almadan önce bu metni kendi şirket anlatımınızla değiştirin.</p>
+          <p class="brand-lead" data-i18n="aboutLead">Hidayeti Prinç olarak Basmati pirinç ürünlerimizi anlaşılır ürün bilgileri ve farklı paket seçenekleriyle müşterilerimize sunuyoruz.</p>
+          <p class="brand-body" data-i18n="aboutBody">Hidayeti Prinç ve Buharı Prinç ürün ailelerini, 5 kg ve 10 kg paket seçenekleriyle tek bir katalogda bir araya getiriyoruz. Ürün fotoğraflarımızı ve doğrulanmış teknik bilgileri burada paylaşarak seçim yapmanızı kolaylaştırmayı amaçlıyoruz. Güncel fiyat, stok ve teslimat ayrıntılarını WhatsApp üzerinden doğrudan görüşebilirsiniz.</p>
           <a class="underlined-link" href="#contact"><span data-i18n="aboutCta">Bize ulaşın</span><span aria-hidden="true">↗</span></a>
         </div>
       </div>
@@ -216,6 +239,24 @@
         <article class="brand-fact"><span>01</span><div><h3 data-i18n="brandFactOneTitle">Ürün odaklı yaklaşım</h3><p data-i18n="brandFactOneText">Ürün aileleri ve paket bilgileri kolayca görüntülenebilir.</p></div></article>
         <article class="brand-fact"><span>02</span><div><h3 data-i18n="brandFactTwoTitle">Açık ürün bilgisi</h3><p data-i18n="brandFactTwoText">Gerçek ürün detayları, teknik bilgiler ve fotoğraflar burada güncellenebilir.</p></div></article>
         <article class="brand-fact"><span>03</span><div><h3 data-i18n="brandFactThreeTitle">Doğrudan iletişim</h3><p data-i18n="brandFactThreeText">Fiyat ve ürün soruları doğrudan WhatsApp üzerinden iletilebilir.</p></div></article>
+      </div>
+    </section>
+
+    <section class="faq-section section-pad" id="faq">
+      <div class="wrap">
+        <div class="section-heading faq-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="faqEyebrow">SIK SORULAN SORULAR</span></div>
+            <h2 data-i18n="faqTitle">Aklınızdaki sorulara <em>yanıt bulalım.</em></h2>
+          </div>
+          <p data-i18n="faqIntro">Ürün seçenekleri, fiyat bilgisi ve iletişim süreci hakkında kısa yanıtlar.</p>
+        </div>
+        <div class="faq-grid">
+          <details class="faq-item"><summary data-i18n="faqQuestionProducts">Hangi Basmati pirinç ürünleri mevcut?</summary><p data-i18n="faqAnswerProducts">Katalogda Hidayeti Prinç ve Buharı Prinç ürün ailelerinin 5 kg ve 10 kg seçenekleri yer alıyor.</p></details>
+          <details class="faq-item"><summary data-i18n="faqQuestionPrice">Fiyat bilgisini nasıl alabilirim?</summary><p data-i18n="faqAnswerPrice">İlgilendiğiniz ürünün WhatsApp düğmesine tıklayın. Ürün adı hazır mesaja eklenir; güncel fiyatı sormak için mesajı gönderin.</p></details>
+          <details class="faq-item"><summary data-i18n="faqQuestionWholesale">Toptan alım için iletişime geçebilir miyim?</summary><p data-i18n="faqAnswerWholesale">Bireysel müşteriler, işletmeler ve toptan alım yapanlar ürün bilgisi ve fiyat teklifi için doğrudan bizimle görüşebilir.</p></details>
+          <details class="faq-item"><summary data-i18n="faqQuestionOrder">Web sitesinden ödeme yapabilir miyim?</summary><p data-i18n="faqAnswerOrder">Bu site ürün kataloğu ve iletişim için tasarlanmıştır. Fiyat, stok ve teslimat ayrıntılarını sipariş öncesinde WhatsApp üzerinden görüşebilirsiniz.</p></details>
+        </div>
       </div>
     </section>
 
@@ -240,7 +281,7 @@
     <div class="wrap footer-main">
       <a href="#top" class="brand footer-brand"><img src="assets/logo.svg" alt="" width="43" height="43"><span class="brand-copy"><strong>HİDAYETİ PRİNÇ</strong><small data-i18n="brandLine">BASMATİ PİRİNÇ</small></span></a>
       <p data-i18n="footerLine">Basmati pirinç ürünlerini keşfedin.</p>
-      <div class="footer-nav"><a href="#products" data-i18n="navProducts">Ürünlerimiz</a><a href="#about" data-i18n="navAbout">Hakkımızda</a><a href="#contact" data-i18n="navContact">İletişim</a></div>
+      <div class="footer-nav"><a href="#products" data-i18n="navProducts">Ürünlerimiz</a><a href="#about" data-i18n="navAbout">Hakkımızda</a><a href="#faq" data-i18n="navFaq">SSS</a><a href="#contact" data-i18n="navContact">İletişim</a></div>
     </div>
     <div class="wrap footer-bottom"><span>© <span id="currentYear"></span> Hidayeti Prinç</span><span data-i18n="footerDemo">Demo içerik ve görseller yayından önce güncellenmelidir.</span><a href="#top" class="back-top"><span data-i18n="backTop">Yukarı dön</span> ↑</a></div>
   </footer>
@@ -255,7 +296,14 @@
     <div class="dialog-content" id="dialogContent"></div>
   </dialog>
 
-  <script src="data/products.js?v=1.3"></script>
-  <script src="app.js?v=1.3"></script>
+  <script>
+    window.addEventListener("load", function () {
+      var stylesheet = document.getElementById("siteStylesheet");
+      var warning = document.getElementById("cssLoadWarning");
+      if (stylesheet && !stylesheet.sheet && warning) warning.style.display = "block";
+    });
+  </script>
+  <script src="./data/products.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>

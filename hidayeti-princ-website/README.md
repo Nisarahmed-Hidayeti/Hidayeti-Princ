@@ -1,12 +1,15 @@
-# Hidayeti Prinç — Basmati rice website (V1.3)
+# Hidayeti Prinç — Basmati rice website (V1.5)
 
 A responsive, one-page bilingual website prototype for Hidayeti Prinç. Turkish is the default language; the English switch uses a US flag as requested. The catalogue has four clearly marked demo products and product-specific WhatsApp inquiry links.
 
 ## Included
 
-- Automatic light/dark appearance: follows the visitor's operating-system/browser `prefers-color-scheme` setting, including readable controls and modal styling. No preference is saved, so it follows system changes automatically.
+- A bilingual FAQ section and expanded editable company introduction.
+- Simplified stylesheet and script paths for local Firefox/Brave previews, with an on-page warning if the CSS file is missing.
+
+- Automatic light/dark appearance: follows the operating-system/browser preference by default. The moon/sun button in the header manually switches themes and remembers the selected override. If no override has been selected, the theme continues to follow system changes. Theme initialization is early to reduce flashing.
 - Expanded one-page storytelling: product range overview, audience-specific sections for individual customers / wholesale buyers / businesses, a clear WhatsApp inquiry flow, and additional editable brand-information cards.
-- Extra scroll-reveal and hover motion, while respecting reduced-motion settings.
+- Scroll-reveal, hover lift, image zoom and theme-button feedback, while respecting reduced-motion settings.
 
 - Stronger contrast and depth: greener section accents, visible product-image frames, clearer shadows, high-contrast filter buttons, and a floating WhatsApp CTA with subtle entrance/pulse animation.
 
@@ -23,10 +26,12 @@ A responsive, one-page bilingual website prototype for Hidayeti Prinç. Turkish 
 Extract the **entire ZIP** into a normal folder before opening it. Keep `index.html`, `styles.css`, `app.js`, the `data/` folder, and the `assets/` folder together exactly as shipped. Then open `index.html` in a browser. The stylesheet and scripts use relative paths and are designed to work from both `file://` and normal HTTP hosting.
 
 If the page looks unstyled in Firefox:
-1. Make sure you opened `index.html` from the extracted folder—not from inside the ZIP preview—and that `styles.css` is beside it.
-2. Press **Ctrl+Shift+R** to bypass the cached file, then close and reopen the page if needed.
-3. Check that the filename is exactly `styles.css` (case matters on many hosts) and that it wasn't renamed to `styles.css.txt`.
-4. For the most reliable local test, run a simple local HTTP server as shown below. This also better resembles the published website.
+1. Make sure you extracted the **entire ZIP** first and opened `index.html` from inside that folder. Do not open a standalone `index.html` downloaded separately: it references neighboring files such as `styles.css`, `app.js`, and `assets/`.
+2. Press **Ctrl+Shift+R** to bypass the cache. The stylesheet is referenced with a simple relative path (`./styles.css`) to avoid file-preview query-string oddities.
+3. Confirm the filename is exactly `styles.css` (case matters on many hosts) and was not renamed to `styles.css.txt`.
+4. For a reliable local preview, run the included folder through a small local HTTP server as shown below.
+
+This is not a known Firefox CSS limitation: with the full folder and relative paths preserved, the same stylesheet is intended to work in Firefox and Brave.
 
 There is no build step and no package install is required.
 

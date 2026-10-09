@@ -5,18 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f2e9">
   <meta name="color-scheme" content="light dark">
+  <script>
+    /* Apply the saved theme before the stylesheet paints, with safe fallbacks for file:// previews. */
+    (function () {
+      var root = document.documentElement;
+      var preference = "system";
+      try {
+        var saved = localStorage.getItem("hidayeti-theme-preference");
+        if (saved === "dark" || saved === "light") preference = saved;
+      } catch (error) { /* Storage may be unavailable for local files; system mode still works. */ }
+      var prefersDark = !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      var theme = preference === "system" ? (prefersDark ? "dark" : "light") : preference;
+      root.setAttribute("data-theme-mode", preference);
+      root.setAttribute("data-theme", theme);
+      root.style.colorScheme = theme;
+    }());
+  </script>
   <meta name="description" content="Explore Hidayeti Prinç Basmati rice products. Contact us on WhatsApp for information and quotes on 5 kg and 10 kg packs.">
   <meta name="robots" content="index,follow">
   <title>Hidayeti Prinç | Basmati Rice Products</title>
   <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
   <link rel="preload" href="../assets/hero-rice.svg" as="image" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css?v=1.3">
+  <link id="siteStylesheet" rel="stylesheet" href="../styles.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Hidayeti Prinç | Basmati Rice Products">
   <meta property="og:description" content="Explore Hidayeti Prinç Basmati rice products. Contact us on WhatsApp for product information and quotes.">
   <!-- Add the canonical URL and hreflang links after the production domain and URL structure are confirmed. -->
 </head>
 <body>
+  <div id="cssLoadWarning" role="alert" style="display:none;position:fixed;z-index:99999;top:12px;left:12px;right:12px;padding:14px 18px;border-radius:10px;background:#8c2330;color:#fff;font:600 14px/1.5 system-ui,sans-serif;box-shadow:0 8px 28px #0004;">Tasarım dosyası (styles.css) yüklenemedi. ZIP dosyasının tamamını bir klasöre çıkarın ve index.html dosyasını styles.css ile aynı klasörden açın. / The stylesheet could not be loaded. Extract the complete ZIP and keep index.html beside styles.css.</div>
   <a class="skip-link" href="#main" data-i18n="skip">İçeriğe geç</a>
   <header class="site-header" id="top">
     <div class="header-inner wrap">
@@ -32,6 +49,10 @@
       <div class="header-actions">
         <button class="language-switch" id="languageToggle" type="button" aria-label="Switch to English">
           <span class="flag" aria-hidden="true">🇺🇸</span><span id="languageLabel">English</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.7 8.7 0 0 1 8.9 3.8 8.8 8.8 0 1 0 20.2 15.1Z"></path></svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.2M12 19.8V22M4.93 4.93l1.56 1.56m11.02 11.02 1.56 1.56M2 12h2.2m15.6 0H22M4.93 19.07l1.56-1.56M17.51 6.49l1.56-1.56"></path></svg>
         </button>
         <a class="header-whatsapp general-whatsapp" href="https://wa.me/905344641463?text=Merhaba%2C%20Hidayeti%20Prin%C3%A7%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" data-i18n="headerWhatsapp">WhatsApp <span aria-hidden="true">↗</span></a>
         <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Menüyü aç">
@@ -219,6 +240,24 @@
       </div>
     </section>
 
+    <section class="faq-section section-pad" id="faq">
+      <div class="wrap">
+        <div class="section-heading faq-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="faqEyebrow">FREQUENTLY ASKED QUESTIONS</span></div>
+            <h2 data-i18n="faqTitle">A few helpful <em>answers.</em></h2>
+          </div>
+          <p data-i18n="faqIntro">Quick answers about product options, pricing, and how to contact us.</p>
+        </div>
+        <div class="faq-grid">
+          <details class="faq-item"><summary data-i18n="faqQuestionProducts">Which Basmati rice products are available?</summary><p data-i18n="faqAnswerProducts">The catalogue includes the Hidayeti Prinç and Buharı Prinç product ranges in 5 kg and 10 kg packs.</p></details>
+          <details class="faq-item"><summary data-i18n="faqQuestionPrice">How can I ask about pricing?</summary><p data-i18n="faqAnswerPrice">Click the WhatsApp button on the product you are interested in. The product name is added to a draft message; send it to ask for current pricing.</p></details>
+          <details class="faq-item"><summary data-i18n="faqQuestionWholesale">Can wholesale buyers get in touch?</summary><p data-i18n="faqAnswerWholesale">Individual customers, businesses, and wholesale buyers can contact us directly for product information and quote requests.</p></details>
+          <details class="faq-item"><summary data-i18n="faqQuestionOrder">Can I pay directly on the website?</summary><p data-i18n="faqAnswerOrder">This website is designed for product browsing and direct contact. Confirm prices, availability, and delivery details with us on WhatsApp before ordering.</p></details>
+        </div>
+      </div>
+    </section>
+
     <section class="contact-section section-pad" id="contact">
       <div class="wrap contact-panel">
         <div class="contact-decoration" aria-hidden="true"><span class="contact-circle circle-one"></span><span class="contact-circle circle-two"></span><img src="../assets/logo.svg" alt="" width="65" height="65"></div>
@@ -255,7 +294,14 @@
     <div class="dialog-content" id="dialogContent"></div>
   </dialog>
 
-  <script src="../data/products.js?v=1.3"></script>
-  <script src="../app.js?v=1.3"></script>
+  <script>
+    window.addEventListener("load", function () {
+      var stylesheet = document.getElementById("siteStylesheet");
+      var warning = document.getElementById("cssLoadWarning");
+      if (stylesheet && !stylesheet.sheet && warning) warning.style.display = "block";
+    });
+  </script>
+  <script src="../data/products.js"></script>
+  <script src="../app.js"></script>
 </body>
 </html>

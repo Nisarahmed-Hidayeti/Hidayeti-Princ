@@ -6,7 +6,7 @@
   const ASSET_PREFIX = document.documentElement.dataset.assetPrefix || "";
   const translations = {
     tr: {
-      skip: "İçeriğe geç", brandLine: "BASMATİ PİRİNÇ", navProducts: "Ürünlerimiz", navAbout: "Hakkımızda", navContact: "İletişim",
+      skip: "İçeriğe geç", brandLine: "BASMATİ PİRİNÇ", navProducts: "Ürünlerimiz", navAbout: "Hakkımızda", navFaq: "SSS", navContact: "İletişim",
       headerWhatsapp: "WhatsApp <span aria-hidden=\"true\">↗</span>", floatingWhatsapp: "WhatsApp'tan yazın", mobileWhatsapp: "WhatsApp üzerinden ulaşın ↗",
       heroEyebrow: "HİDAYETİ PRİNÇ · BASMATİ", heroTitle: "Basmati pirinç ürünlerini <em>keşfedin.</em>",
       heroDescription: "Hidayeti Prinç ve Buharı Prinç ürün seçeneklerini inceleyin. Ürün detayları ve fiyat bilgisi için bize doğrudan ulaşın.",
@@ -39,9 +39,14 @@
       brandFactTwoTitle: "Açık ürün bilgisi", brandFactTwoText: "Gerçek ürün detayları, teknik bilgiler ve fotoğraflar burada güncellenebilir.",
       brandFactThreeTitle: "Doğrudan iletişim", brandFactThreeText: "Fiyat ve ürün soruları doğrudan WhatsApp üzerinden iletilebilir.",
       aboutEyebrow: "MARKAMIZ", aboutTitle: "Hidayeti Prinç'i <em>tanıyın.</em>",
-      aboutLead: "Basmati pirinç ürünlerimizi keşfedin; ihtiyacınıza uygun paket seçeneği için bizimle iletişime geçin.",
-      aboutBody: "Bu alan, işletmenizin gerçek hikâyesi, üretim yaklaşımı ve ürünleri hakkında sağlayacağınız bilgilerle güncellenecek. Yayına almadan önce bu metni kendi şirket anlatımınızla değiştirin.",
-      aboutCta: "Bize ulaşın", brandCardLabel: "HİDAYETİ PRİNÇ", brandCardLine: "Basmati pirinç ürünleri", brandCardBottom: "MARKA HİKÂYESİ BURADA",
+      aboutLead: "Hidayeti Prinç olarak Basmati pirinç ürünlerimizi anlaşılır ürün bilgileri ve farklı paket seçenekleriyle müşterilerimize sunuyoruz.",
+      aboutBody: "Hidayeti Prinç ve Buharı Prinç ürün ailelerini, 5 kg ve 10 kg paket seçenekleriyle tek bir katalogda bir araya getiriyoruz. Ürün fotoğraflarımızı ve doğrulanmış teknik bilgileri burada paylaşarak seçim yapmanızı kolaylaştırmayı amaçlıyoruz. Güncel fiyat, stok ve teslimat ayrıntılarını WhatsApp üzerinden doğrudan görüşebilirsiniz.",
+      aboutCta: "Bize ulaşın", brandCardLabel: "HİDAYETİ PRİNÇ", brandCardLine: "Basmati pirinç üreticisi", brandCardBottom: "BASMATİ · 5 KG / 10 KG",
+      faqEyebrow: "SIK SORULAN SORULAR", faqTitle: "Aklınızdaki sorulara <em>yanıt bulalım.</em>", faqIntro: "Ürün seçenekleri, fiyat bilgisi ve iletişim süreci hakkında kısa yanıtlar.",
+      faqQuestionProducts: "Hangi Basmati pirinç ürünleri mevcut?", faqAnswerProducts: "Katalogda Hidayeti Prinç ve Buharı Prinç ürün ailelerinin 5 kg ve 10 kg seçenekleri yer alıyor.",
+      faqQuestionPrice: "Fiyat bilgisini nasıl alabilirim?", faqAnswerPrice: "İlgilendiğiniz ürünün WhatsApp düğmesine tıklayın. Ürün adı hazır mesaja eklenir; güncel fiyatı sormak için mesajı gönderin.",
+      faqQuestionWholesale: "Toptan alım için iletişime geçebilir miyim?", faqAnswerWholesale: "Bireysel müşteriler, işletmeler ve toptan alım yapanlar ürün bilgisi ve fiyat teklifi için doğrudan bizimle görüşebilir.",
+      faqQuestionOrder: "Web sitesinden ödeme yapabilir miyim?", faqAnswerOrder: "Bu site ürün kataloğu ve iletişim için tasarlanmıştır. Fiyat, stok ve teslimat ayrıntılarını sipariş öncesinde WhatsApp üzerinden görüşebilirsiniz.",
       contactEyebrow: "İLETİŞİM", contactTitle: "Bir ürün hakkında <em>konuşalım.</em>",
       contactDescription: "Ürün detayları ve fiyat teklifi için bize WhatsApp'tan yazın. Mesajınızı birlikte netleştirelim.",
       contactWhatsapp: "WhatsApp'tan yazın <span aria-hidden=\"true\">↗</span>", phoneLabel: "Telefon / WhatsApp", contactSideNote: "Hidayeti Prinç<br> Basmati pirinç ürünleri",
@@ -51,10 +56,10 @@
       dialogWhatsapp: "WhatsApp'tan bilgi ve fiyat alın", languageName: "English", languageFlag: "🇺🇸", languageAria: "Switch to English",
       resultSingular: "ürün", resultPlural: "ürün", searchPlaceholder: "Ürün ara...", familyHidayeti: "HİDAYETİ PRİNÇ", familyBuhari: "BUHARI PRİNÇ",
       generalMessage: "Merhaba, Hidayeti Prinç Basmati pirinç ürünleri hakkında bilgi ve fiyat almak istiyorum.", productMessagePrefix: "Merhaba, ", productMessageSuffix: " ürünü hakkında bilgi ve fiyat almak istiyorum.",
-      pageTitle: "Hidayeti Prinç | Basmati Pirinç Ürünleri", pageDescription: "Hidayeti Prinç Basmati pirinç ürünlerini keşfedin. 5 kg ve 10 kg ürün seçenekleri hakkında bilgi ve fiyat için WhatsApp'tan bize ulaşın."
+      themeToDark: "Koyu temaya geç", themeToLight: "Açık temaya geç", pageTitle: "Hidayeti Prinç | Basmati Pirinç Ürünleri", pageDescription: "Hidayeti Prinç Basmati pirinç ürünlerini keşfedin. 5 kg ve 10 kg ürün seçenekleri hakkında bilgi ve fiyat için WhatsApp'tan bize ulaşın."
     },
     en: {
-      skip: "Skip to content", brandLine: "BASMATI RICE", navProducts: "Our products", navAbout: "About us", navContact: "Contact",
+      skip: "Skip to content", brandLine: "BASMATI RICE", navProducts: "Our products", navAbout: "About us", navFaq: "FAQ", navContact: "Contact",
       headerWhatsapp: "WhatsApp <span aria-hidden=\"true\">↗</span>", floatingWhatsapp: "Message us on WhatsApp", mobileWhatsapp: "Contact us on WhatsApp ↗",
       heroEyebrow: "HIDAYETI PRINÇ · BASMATI", heroTitle: "Discover our <em>Basmati rice.</em>",
       heroDescription: "Explore Hidayeti Prinç and Buharı Prinç product options. Contact us directly for product details and a quote.",
@@ -87,9 +92,14 @@
       brandFactTwoTitle: "Clear product details", brandFactTwoText: "Real product details, specifications, and photographs can be updated here.",
       brandFactThreeTitle: "Direct contact", brandFactThreeText: "Product and pricing questions can be sent directly through WhatsApp.",
       aboutEyebrow: "ABOUT THE BRAND", aboutTitle: "Get to know <em>Hidayeti Prinç.</em>",
-      aboutLead: "Explore our Basmati rice products and contact us to discuss the pack option that suits your needs.",
-      aboutBody: "This section will be updated with your company story, production approach, and verified product information. Replace this sample copy with your own company introduction before launch.",
-      aboutCta: "Get in touch", brandCardLabel: "HIDAYETI PRINÇ", brandCardLine: "Basmati rice products", brandCardBottom: "YOUR BRAND STORY GOES HERE",
+      aboutLead: "As a rice manufacturer, Hidayeti Prinç brings its Basmati rice product ranges together with clear information and practical pack options.",
+      aboutBody: "We bring the Hidayeti Prinç and Buharı Prinç product ranges together in one catalogue, with 5 kg and 10 kg pack options. Our goal is to make product information easier to browse. Contact us directly on WhatsApp to confirm current prices, availability, and delivery details.",
+      aboutCta: "Get in touch", brandCardLabel: "HIDAYETI PRINÇ", brandCardLine: "Basmati rice manufacturer", brandCardBottom: "BASMATI · 5 KG / 10 KG",
+      faqEyebrow: "FREQUENTLY ASKED QUESTIONS", faqTitle: "A few helpful <em>answers.</em>", faqIntro: "Quick answers about product options, pricing, and how to contact us.",
+      faqQuestionProducts: "Which Basmati rice products are available?", faqAnswerProducts: "The catalogue includes the Hidayeti Prinç and Buharı Prinç product ranges in 5 kg and 10 kg packs.",
+      faqQuestionPrice: "How can I ask about pricing?", faqAnswerPrice: "Click the WhatsApp button on the product you are interested in. The product name is added to a draft message; send it to ask for current pricing.",
+      faqQuestionWholesale: "Can wholesale buyers get in touch?", faqAnswerWholesale: "Individual customers, businesses, and wholesale buyers can contact us directly for product information and quote requests.",
+      faqQuestionOrder: "Can I pay directly on the website?", faqAnswerOrder: "This website is designed for product browsing and direct contact. Confirm prices, availability, and delivery details with us on WhatsApp before ordering.",
       contactEyebrow: "CONTACT", contactTitle: "Let's talk about <em>your product.</em>",
       contactDescription: "Message us on WhatsApp for product details and a quote. We’ll help you find the information you need.",
       contactWhatsapp: "Message us on WhatsApp <span aria-hidden=\"true\">↗</span>", phoneLabel: "Phone / WhatsApp", contactSideNote: "Hidayeti Prinç<br> Basmati rice products",
@@ -99,25 +109,64 @@
       dialogWhatsapp: "Ask for details and a quote on WhatsApp", languageName: "Türkçe", languageFlag: "🇹🇷", languageAria: "Türkçe'ye geç",
       resultSingular: "product", resultPlural: "products", searchPlaceholder: "Search products...", familyHidayeti: "HIDAYETI PRINÇ", familyBuhari: "BUHARI PRINÇ",
       generalMessage: "Hello, I would like information and a quote for Hidayeti Prinç Basmati rice products.", productMessagePrefix: "Hello, I would like information and a quote for ", productMessageSuffix: ".",
-      pageTitle: "Hidayeti Prinç | Basmati Rice Products", pageDescription: "Explore Hidayeti Prinç Basmati rice products. Contact us on WhatsApp for information and quotes on 5 kg and 10 kg packs."
+      themeToDark: "Switch to dark mode", themeToLight: "Switch to light mode", pageTitle: "Hidayeti Prinç | Basmati Rice Products", pageDescription: "Explore Hidayeti Prinç Basmati rice products. Contact us on WhatsApp for information and quotes on 5 kg and 10 kg packs."
     }
   };
 
 
-  // The stylesheet follows the operating system's preferred color scheme. Keep
-  // browser chrome (where supported) in sync without storing a separate setting.
+  // Follow system theme by default, but let visitors choose and remember an override.
   const themeColorMeta = document.querySelector('meta[name="theme-color"]');
   const colorSchemeQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
-  function syncThemeColor() {
-    if (themeColorMeta) themeColorMeta.content = colorSchemeQuery && colorSchemeQuery.matches ? "#111a13" : "#f5f2e9";
+  const themeToggle = document.getElementById("themeToggle");
+  const rootElement = document.documentElement;
+  const themeStorageKey = "hidayeti-theme-preference";
+  const state = { lang: document.documentElement.lang === "en" ? "en" : "tr", family: "all", weight: "all", query: "" };
+
+  function updateThemeColor(theme) {
+    const isDark = (theme || rootElement.dataset.theme) === "dark";
+    if (themeColorMeta) themeColorMeta.content = isDark ? "#111a13" : "#f5f2e9";
+    rootElement.style.colorScheme = isDark ? "dark" : "light";
   }
-  syncThemeColor();
+  function storedThemePreference() {
+    try {
+      const saved = localStorage.getItem(themeStorageKey);
+      return saved === "dark" || saved === "light" ? saved : "system";
+    } catch (error) { return "system"; }
+  }
+  function applyTheme(theme, mode) {
+    const safeTheme = theme === "dark" ? "dark" : "light";
+    rootElement.dataset.theme = safeTheme;
+    rootElement.dataset.themeMode = mode || rootElement.dataset.themeMode || "system";
+    updateThemeColor(safeTheme);
+    updateThemeButton();
+  }
+  function updateThemeButton() {
+    if (!themeToggle) return;
+    const dark = rootElement.dataset.theme === "dark";
+    const label = dark ? t("themeToLight") : t("themeToDark");
+    themeToggle.setAttribute("aria-label", label);
+    themeToggle.setAttribute("title", label);
+    themeToggle.setAttribute("aria-pressed", String(dark));
+  }
+  updateThemeColor(rootElement.dataset.theme);
+  updateThemeButton();
   if (colorSchemeQuery) {
-    if (typeof colorSchemeQuery.addEventListener === "function") colorSchemeQuery.addEventListener("change", syncThemeColor);
-    else if (typeof colorSchemeQuery.addListener === "function") colorSchemeQuery.addListener(syncThemeColor);
+    const handleSystemThemeChange = (event) => {
+      if (rootElement.dataset.themeMode === "system" && storedThemePreference() === "system") {
+        applyTheme(event.matches ? "dark" : "light", "system");
+      }
+    };
+    if (typeof colorSchemeQuery.addEventListener === "function") colorSchemeQuery.addEventListener("change", handleSystemThemeChange);
+    else if (typeof colorSchemeQuery.addListener === "function") colorSchemeQuery.addListener(handleSystemThemeChange);
+  }
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const nextTheme = rootElement.dataset.theme === "dark" ? "light" : "dark";
+      applyTheme(nextTheme, "manual");
+      try { localStorage.setItem(themeStorageKey, nextTheme); } catch (error) { /* Theme still switches for this page view. */ }
+    });
   }
 
-  const state = { lang: document.documentElement.lang === "en" ? "en" : "tr", family: "all", weight: "all", query: "" };
   const grid = document.getElementById("productGrid");
   const searchInput = document.getElementById("productSearch");
   const weightFilter = document.getElementById("weightFilter");
@@ -219,6 +268,7 @@
       image.alt = state.lang === "tr" ? image.dataset.altTr : image.dataset.altEn;
     });
     if (languageLabel) languageLabel.textContent = t("languageName");
+    updateThemeButton();
     if (languageToggle) {
       languageToggle.querySelector(".flag").textContent = t("languageFlag");
       languageToggle.setAttribute("aria-label", t("languageAria"));
@@ -330,7 +380,7 @@
   const motionPreference = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: no-preference)").matches : true;
   if (motionPreference && "IntersectionObserver" in window) {
     const revealTargets = document.querySelectorAll(
-      ".hero-bottom, .products-heading, .catalog-tools, .catalog-status, .catalog-bottom-note, .range-heading, .range-layout, .audience-heading, .audience-card, .how-intro, .how-step, .brand-visual, .brand-copy-main, .brand-fact, .contact-panel, .site-footer"
+      ".hero-bottom, .products-heading, .catalog-tools, .catalog-status, .catalog-bottom-note, .range-heading, .range-layout, .audience-heading, .audience-card, .how-intro, .how-step, .brand-visual, .brand-copy-main, .brand-fact, .faq-heading, .faq-item, .contact-panel, .site-footer"
     );
     document.documentElement.classList.add("has-scroll-reveal");
     revealTargets.forEach((element) => element.classList.add("reveal-on-scroll"));
