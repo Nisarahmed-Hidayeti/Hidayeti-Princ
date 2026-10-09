@@ -7,7 +7,7 @@
   const translations = {
     tr: {
       skip: "İçeriğe geç", brandLine: "BASMATİ PİRİNÇ", navProducts: "Ürünlerimiz", navAbout: "Hakkımızda", navContact: "İletişim",
-      headerWhatsapp: "WhatsApp <span aria-hidden=\"true\">↗</span>", mobileWhatsapp: "WhatsApp üzerinden ulaşın ↗",
+      headerWhatsapp: "WhatsApp <span aria-hidden=\"true\">↗</span>", floatingWhatsapp: "WhatsApp'tan yazın", mobileWhatsapp: "WhatsApp üzerinden ulaşın ↗",
       heroEyebrow: "HİDAYETİ PRİNÇ · BASMATİ", heroTitle: "Basmati pirinç ürünlerini <em>keşfedin.</em>",
       heroDescription: "Hidayeti Prinç ve Buharı Prinç ürün seçeneklerini inceleyin. Ürün detayları ve fiyat bilgisi için bize doğrudan ulaşın.",
       heroPrimary: "Ürünleri keşfet <span aria-hidden=\"true\">↓</span>", heroSecondary: "<span class=\"wa-dot\" aria-hidden=\"true\">◉</span> WhatsApp'tan bilgi al",
@@ -36,7 +36,7 @@
     },
     en: {
       skip: "Skip to content", brandLine: "BASMATI RICE", navProducts: "Our products", navAbout: "About us", navContact: "Contact",
-      headerWhatsapp: "WhatsApp <span aria-hidden=\"true\">↗</span>", mobileWhatsapp: "Contact us on WhatsApp ↗",
+      headerWhatsapp: "WhatsApp <span aria-hidden=\"true\">↗</span>", floatingWhatsapp: "Message us on WhatsApp", mobileWhatsapp: "Contact us on WhatsApp ↗",
       heroEyebrow: "HIDAYETI PRINÇ · BASMATI", heroTitle: "Discover our <em>Basmati rice.</em>",
       heroDescription: "Explore Hidayeti Prinç and Buharı Prinç product options. Contact us directly for product details and a quote.",
       heroPrimary: "Explore products <span aria-hidden=\"true\">↓</span>", heroSecondary: "<span class=\"wa-dot\" aria-hidden=\"true\">◉</span> Ask us on WhatsApp",

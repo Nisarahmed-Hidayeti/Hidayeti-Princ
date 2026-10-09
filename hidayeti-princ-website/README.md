@@ -1,16 +1,10 @@
-# Hidayeti Prinç — Basmati rice website (V1)
+# Hidayeti Prinç — Basmati rice website (V1.2)
 
 A responsive, one-page bilingual website prototype for Hidayeti Prinç. Turkish is the default language; the English switch uses a US flag as requested. The catalogue has four clearly marked demo products and product-specific WhatsApp inquiry links.
 
-## Visual refresh (V1.1)
-
-- Stronger contrast between the page background, catalogue area, product cards, and controls.
-- More defined card/image edges and visible layered shadows.
-- WhatsApp actions use a distinct green treatment with hover feedback.
-- Clearer active catalogue filters and keyboard focus rings.
-- Subtle hero entrance, product-card entrance, hover motion, and scroll-reveal animations. Reduced-motion preferences are respected.
-
 ## Included
+
+- Stronger contrast and depth: greener section accents, visible product-image frames, clearer shadows, high-contrast filter buttons, and a floating WhatsApp CTA with subtle entrance/pulse animation.
 
 - Warm, minimal food-brand design with an editable SVG wordmark and local SVG placeholder artwork.
 - Responsive navigation and mobile menu.
