@@ -19,6 +19,25 @@
       searchLabel: "Ürün ara", sizeLabel: "Paket boyutu", sizeAll: "Tüm boyutlar", demoNotice: "Demo ürün görselleri ve açıklamaları kullanılıyor.",
       emptyTitle: "Ürün bulunamadı", emptyDescription: "Aramanızı veya filtrelerinizi değiştirmeyi deneyin.", resetFilters: "Filtreleri temizle ↗",
       catalogFootnote: "Ürün açıklamaları, gerçek ambalaj fotoğrafları ve teknik bilgiler işletme tarafından daha sonra eklenecek.",
+      rangeEyebrow: "BASMATİ ÜRÜN AİLESİ", rangeTitle: "Basmati pirinçte <em>net seçenekler.</em>",
+      rangeIntro: "Hidayeti Prinç ve Buharı Prinç ürün ailelerini inceleyin. Paket seçenekleri ve ürün detayları için bizimle doğrudan iletişime geçin.",
+      rangePhotoLabel: "PAKET SEÇENEKLERİ", rangePointOneTitle: "İki ürün ailesi", rangePointOneText: "Hidayeti Prinç ve Buharı Prinç seçeneklerini tek bir katalogda karşılaştırın.",
+      rangePointTwoTitle: "5 kg ve 10 kg", rangePointTwoText: "Mevcut ürünler arasında paket boyutuna göre gezinin.",
+      rangePointThreeTitle: "Doğrudan iletişim", rangePointThreeText: "Fiyat, stok ve ürün bilgilerini WhatsApp üzerinden sorun; ayrıntıları işletmeyle doğrulayın.", rangeCta: "Kataloğa dön",
+      audienceEyebrow: "KİMLER İÇİN?", audienceTitle: "İhtiyacınız ne olursa olsun, <em>ürünlerden başlayın.</em>",
+      audienceIntro: "Bireysel müşteriler, işletmeler ve toptan alım yapanlar ürün seçeneklerini inceleyebilir ve detayları doğrudan sorabilir.",
+      audienceHomeTitle: "Bireysel müşteriler", audienceHomeText: "Paket seçeneklerine göz atın ve size uygun ürünle ilgili bilgi isteyin.",
+      audienceWholesaleTitle: "Toptan alım yapanlar", audienceWholesaleText: "Ürün seçenekleri, paketler ve fiyatlandırma hakkında doğrudan görüşün.",
+      audienceBusinessTitle: "İşletmeler", audienceBusinessText: "Ürün bilgisi ve teklif talebinizi Hidayeti Prinç ekibine iletin.",
+      audienceProductsCta: "Ürünleri incele", audienceContactCta: "İletişime geç",
+      howEyebrow: "BASİT VE DOĞRUDAN", howTitle: "Ürünü seçin. <em>Bizimle konuşun.</em>",
+      howIntro: "Site üzerinden ödeme yok. Ürün seçiminizi yapın, WhatsApp'tan sorun ve ayrıntıları doğrudan netleştirin.", howCta: "WhatsApp'tan iletişime geç <span aria-hidden=\"true\">↗</span>",
+      howStepOneTitle: "Ürünleri keşfedin", howStepOneText: "Katalogda Hidayeti Prinç ve Buharı Prinç seçeneklerini inceleyin.",
+      howStepTwoTitle: "Paketinizi seçin", howStepTwoText: "5 kg veya 10 kg seçeneğini açın ve ürünle ilgili bilgileri görüntüleyin.",
+      howStepThreeTitle: "WhatsApp'tan sorun", howStepThreeText: "Ürün adı hazır mesajda yer alır. Mesajı kontrol edip gönderin; fiyat ve uygunluk bilgisini doğrudan alın.",
+      brandFactOneTitle: "Ürün odaklı yaklaşım", brandFactOneText: "Ürün aileleri ve paket bilgileri kolayca görüntülenebilir.",
+      brandFactTwoTitle: "Açık ürün bilgisi", brandFactTwoText: "Gerçek ürün detayları, teknik bilgiler ve fotoğraflar burada güncellenebilir.",
+      brandFactThreeTitle: "Doğrudan iletişim", brandFactThreeText: "Fiyat ve ürün soruları doğrudan WhatsApp üzerinden iletilebilir.",
       aboutEyebrow: "MARKAMIZ", aboutTitle: "Hidayeti Prinç'i <em>tanıyın.</em>",
       aboutLead: "Basmati pirinç ürünlerimizi keşfedin; ihtiyacınıza uygun paket seçeneği için bizimle iletişime geçin.",
       aboutBody: "Bu alan, işletmenizin gerçek hikâyesi, üretim yaklaşımı ve ürünleri hakkında sağlayacağınız bilgilerle güncellenecek. Yayına almadan önce bu metni kendi şirket anlatımınızla değiştirin.",
@@ -48,6 +67,25 @@
       searchLabel: "Search products", sizeLabel: "Pack size", sizeAll: "All sizes", demoNotice: "Demo product images and descriptions are being used.",
       emptyTitle: "No products found", emptyDescription: "Try changing your search or filters.", resetFilters: "Clear filters ↗",
       catalogFootnote: "Product descriptions, real packaging photos, and technical details will be added by the business later.",
+      rangeEyebrow: "THE BASMATI RANGE", rangeTitle: "Clear choices for <em>Basmati rice.</em>",
+      rangeIntro: "Explore the Hidayeti Prinç and Buharı Prinç ranges. Contact us directly for pack options and product details.",
+      rangePhotoLabel: "AVAILABLE PACK SIZES", rangePointOneTitle: "Two product ranges", rangePointOneText: "Browse Hidayeti Prinç and Buharı Prinç options in one catalogue.",
+      rangePointTwoTitle: "5 kg and 10 kg", rangePointTwoText: "Browse available products by pack size.",
+      rangePointThreeTitle: "Direct contact", rangePointThreeText: "Ask about pricing, availability, and product details on WhatsApp; confirm details directly with the business.", rangeCta: "Back to catalogue",
+      audienceEyebrow: "WHO WE SERVE", audienceTitle: "Whatever your needs, <em>start with the products.</em>",
+      audienceIntro: "Individual customers, businesses, and wholesale buyers can explore the range and ask us directly for details.",
+      audienceHomeTitle: "Individual customers", audienceHomeText: "Browse pack options and ask about the product that suits your needs.",
+      audienceWholesaleTitle: "Wholesale buyers", audienceWholesaleText: "Discuss product options, packs, and pricing directly with us.",
+      audienceBusinessTitle: "Businesses", audienceBusinessText: "Send your product questions and quote request to Hidayeti Prinç.",
+      audienceProductsCta: "Explore products", audienceContactCta: "Contact us",
+      howEyebrow: "SIMPLE AND DIRECT", howTitle: "Choose a product. <em>Talk to us.</em>",
+      howIntro: "There is no online checkout. Choose a product, ask us on WhatsApp, and confirm the details directly.", howCta: "Contact us on WhatsApp <span aria-hidden=\"true\">↗</span>",
+      howStepOneTitle: "Explore the products", howStepOneText: "Browse Hidayeti Prinç and Buharı Prinç options in the catalogue.",
+      howStepTwoTitle: "Choose your pack", howStepTwoText: "Open the 5 kg or 10 kg option to see its product information.",
+      howStepThreeTitle: "Ask on WhatsApp", howStepThreeText: "The product name is included in a draft message. Review and send it to ask directly about pricing and availability.",
+      brandFactOneTitle: "Product-focused", brandFactOneText: "Product ranges and pack information are easy to browse.",
+      brandFactTwoTitle: "Clear product details", brandFactTwoText: "Real product details, specifications, and photographs can be updated here.",
+      brandFactThreeTitle: "Direct contact", brandFactThreeText: "Product and pricing questions can be sent directly through WhatsApp.",
       aboutEyebrow: "ABOUT THE BRAND", aboutTitle: "Get to know <em>Hidayeti Prinç.</em>",
       aboutLead: "Explore our Basmati rice products and contact us to discuss the pack option that suits your needs.",
       aboutBody: "This section will be updated with your company story, production approach, and verified product information. Replace this sample copy with your own company introduction before launch.",
@@ -64,6 +102,20 @@
       pageTitle: "Hidayeti Prinç | Basmati Rice Products", pageDescription: "Explore Hidayeti Prinç Basmati rice products. Contact us on WhatsApp for information and quotes on 5 kg and 10 kg packs."
     }
   };
+
+
+  // The stylesheet follows the operating system's preferred color scheme. Keep
+  // browser chrome (where supported) in sync without storing a separate setting.
+  const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+  const colorSchemeQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  function syncThemeColor() {
+    if (themeColorMeta) themeColorMeta.content = colorSchemeQuery && colorSchemeQuery.matches ? "#111a13" : "#f5f2e9";
+  }
+  syncThemeColor();
+  if (colorSchemeQuery) {
+    if (typeof colorSchemeQuery.addEventListener === "function") colorSchemeQuery.addEventListener("change", syncThemeColor);
+    else if (typeof colorSchemeQuery.addListener === "function") colorSchemeQuery.addListener(syncThemeColor);
+  }
 
   const state = { lang: document.documentElement.lang === "en" ? "en" : "tr", family: "all", weight: "all", query: "" };
   const grid = document.getElementById("productGrid");
@@ -278,7 +330,7 @@
   const motionPreference = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: no-preference)").matches : true;
   if (motionPreference && "IntersectionObserver" in window) {
     const revealTargets = document.querySelectorAll(
-      ".hero-bottom, .products-heading, .catalog-tools, .catalog-status, .catalog-bottom-note, .brand-visual, .brand-copy-main, .contact-panel, .site-footer"
+      ".hero-bottom, .products-heading, .catalog-tools, .catalog-status, .catalog-bottom-note, .range-heading, .range-layout, .audience-heading, .audience-card, .how-intro, .how-step, .brand-visual, .brand-copy-main, .brand-fact, .contact-panel, .site-footer"
     );
     document.documentElement.classList.add("has-scroll-reveal");
     revealTargets.forEach((element) => element.classList.add("reveal-on-scroll"));
