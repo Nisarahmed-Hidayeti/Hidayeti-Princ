@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" role="img" aria-labelledby="title desc">
+<title id="title">BUHARI PRİNÇ Basmati rice 5 KG demo packaging</title>
+<desc id="desc">Illustrative placeholder packaging for BUHARI PRİNÇ 5 KG. Replace with the real product photograph.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7f1e6"/><stop offset="1" stop-color="#e8ddc7"/></linearGradient>
+ <linearGradient id="pack" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdf7"/><stop offset=".55" stop-color="#f1e7d4"/><stop offset="1" stop-color="#d8c8a9"/></linearGradient>
+ <linearGradient id="label" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2f493b"/><stop offset="1" stop-color="#1c3026"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="20"/></filter>
+</defs>
+<rect width="600" height="720" rx="30" fill="url(#bg)"/>
+<circle cx="455" cy="120" r="110" fill="#aab58a" opacity=".12"/>
+<circle cx="110" cy="590" r="90" fill="#fffaf0" opacity=".65"/>
+<ellipse cx="300" cy="625" rx="180" ry="28" fill="#5d4b2f" opacity=".16" filter="url(#shadow)"/>
+<g transform="translate(110 62)">
+ <path d="M58 54 81 18h182l24 36 14 70-8 435q-1 25-28 28H63q-26-3-27-29L29 124Z" fill="url(#pack)" stroke="#d7c7a8" stroke-width="3"/>
+ <path d="M81 18h182l24 36H58Z" fill="#e9deca" stroke="#d7c7a8" stroke-width="2"/>
+ <path d="M43 120q126 20 261 0" fill="none" stroke="#aab58a" stroke-opacity=".6" stroke-width="3"/>
+ <rect x="65" y="151" width="216" height="274" rx="4" fill="url(#label)"/>
+ <rect x="76" y="162" width="194" height="252" rx="2" fill="none" stroke="#aab58a" stroke-width="2" stroke-opacity=".9"/>
+ <text x="173" y="199" font-family="Georgia,serif" font-size="16" text-anchor="middle" letter-spacing="4" fill="#aab58a">BUHARI</text>
+ <text x="173" y="231" font-family="Georgia,serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#fff9ed">PRİNÇ</text>
+ <path d="M173 249v67M173 262q-25-2-29-22 24 1 29 22M174 278q25-2 29-22-24 1-29 22M173 293q-22-2-26-20 21 1 26 20M174 306q22-2 26-20-21 1-26 20" fill="none" stroke="#aab58a" stroke-width="2.7" stroke-linecap="round"/>
+ <path d="M98 324h150" stroke="#aab58a" stroke-opacity=".7"/>
+ <text x="173" y="350" font-family="Arial,sans-serif" font-size="18" text-anchor="middle" letter-spacing="4" fill="#fff9ed">BASMATI</text>
+ <text x="173" y="375" font-family="Arial,sans-serif" font-size="13" text-anchor="middle" letter-spacing="2.5" fill="#e7dcc4">PİRİNÇ</text>
+ <rect x="119" y="443" width="108" height="35" rx="17.5" fill="#aab58a"/>
+ <text x="173" y="466" font-family="Arial,sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#26372d">5 KG</text>
+ <text x="173" y="507" font-family="Arial,sans-serif" font-size="11" letter-spacing="3" text-anchor="middle" fill="#81735c">DEMO PACKAGING</text>
+ <path d="M60 535q113 21 225 0" fill="none" stroke="#cdbb98" stroke-width="2"/>
+</g>
+<text x="300" y="688" font-family="Arial,sans-serif" font-size="11" letter-spacing="3" text-anchor="middle" fill="#83745a">PLACEHOLDER VISUAL</text>
+</svg>

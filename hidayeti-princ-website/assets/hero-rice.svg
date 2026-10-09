@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 730" role="img" aria-labelledby="title desc">
+  <title id="title">Hidayeti Prinç Basmati product illustration</title>
+  <desc id="desc">A warm ivory rice bag, a ceramic bowl of golden rice, and a delicate rice stalk on a soft neutral background. Placeholder art for the website.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6f1e6"/><stop offset="1" stop-color="#e8ddc5"/></linearGradient>
+    <linearGradient id="bag" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdf6"/><stop offset=".53" stop-color="#f3ead7"/><stop offset="1" stop-color="#dfd1b7"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e6c979"/><stop offset="1" stop-color="#ae8438"/></linearGradient>
+    <linearGradient id="bowl" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#cfc2a8"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="860" height="730" rx="40" fill="url(#bg)"/>
+  <circle cx="584" cy="280" r="205" fill="#d9c69d" opacity=".25"/>
+  <circle cx="180" cy="175" r="100" fill="#fffaf0" opacity=".55"/>
+  <ellipse cx="440" cy="626" rx="260" ry="35" fill="#7e6848" opacity=".17" filter="url(#shadow)"/>
+  <!-- bag -->
+  <g transform="translate(240 105) rotate(-5 160 245)">
+    <path d="M67 58 96 24h140l30 34 14 51-4 361q-2 24-28 26H84q-27-2-27-27L52 110Z" fill="url(#bag)" stroke="#d8c9ac" stroke-width="2"/>
+    <path d="M96 24h140l16 31H79Z" fill="#e9deca" stroke="#d8c9ac" stroke-width="1.5"/>
+    <path d="M62 109q108 20 210 0" fill="none" stroke="#b49a67" stroke-opacity=".42" stroke-width="2"/>
+    <rect x="82" y="132" width="156" height="208" rx="3" fill="#24382e"/>
+    <rect x="91" y="141" width="138" height="190" rx="2" fill="none" stroke="#d8bc7c" stroke-opacity=".8"/>
+    <text x="160" y="168" font-family="Georgia,serif" font-size="12" letter-spacing="3" text-anchor="middle" fill="#dfc489">HİDAYETİ</text>
+    <text x="160" y="195" font-family="Georgia,serif" font-weight="bold" font-size="21" text-anchor="middle" fill="#fff8e8">PRİNÇ</text>
+    <path d="M160 209v48M160 221q-22-1-24-17 20 1 24 17M161 232q22-1 24-17-20 1-24 17M160 244q-18-1-21-15 17 1 21 15M161 252q18-1 21-15-17 1-21 15" fill="none" stroke="#d8bc7c" stroke-width="2" stroke-linecap="round"/>
+    <path d="M109 274h102" stroke="#d8bc7c" stroke-opacity=".65"/>
+    <text x="160" y="294" font-family="Arial,sans-serif" font-size="14" letter-spacing="2" text-anchor="middle" fill="#fff8e8">BASMATI</text>
+    <text x="160" y="315" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5" text-anchor="middle" fill="#e6d8b9">PİRİNÇ</text>
+    <rect x="117" y="354" width="86" height="28" rx="14" fill="url(#gold)"/>
+    <text x="160" y="372" font-family="Arial,sans-serif" font-weight="bold" font-size="12" text-anchor="middle" fill="#24382e">DEMO · 5 KG</text>
+    <text x="160" y="409" font-family="Arial,sans-serif" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="#81745e">PLACEHOLDER</text>
+    <path d="M75 449q80 15 169 0" fill="none" stroke="#c6b18b" stroke-width="1.5"/>
+  </g>
+  <!-- rice bowl -->
+  <g transform="translate(420 390)">
+    <ellipse cx="145" cy="180" rx="170" ry="31" fill="#9b845c" opacity=".14"/>
+    <path d="M-7 48q18 120 152 125Q284 167 301 48Z" fill="url(#bowl)" stroke="#c8b99d" stroke-width="2"/>
+    <ellipse cx="147" cy="49" rx="154" ry="59" fill="#ede3d0" stroke="#c8b99d" stroke-width="2"/>
+    <ellipse cx="147" cy="45" rx="135" ry="43" fill="#d3a44f"/>
+    <ellipse cx="147" cy="39" rx="130" ry="39" fill="#e1bc6c"/>
+    <g fill="#fff0bd" stroke="#b78e43" stroke-width=".9">
+      <ellipse cx="70" cy="31" rx="13" ry="4" transform="rotate(25 70 31)"/><ellipse cx="92" cy="20" rx="14" ry="4" transform="rotate(-16 92 20)"/><ellipse cx="114" cy="38" rx="13" ry="4" transform="rotate(45 114 38)"/>
+      <ellipse cx="138" cy="17" rx="13" ry="4" transform="rotate(5 138 17)"/><ellipse cx="159" cy="34" rx="15" ry="4" transform="rotate(-30 159 34)"/><ellipse cx="182" cy="18" rx="14" ry="4" transform="rotate(27 182 18)"/>
+      <ellipse cx="210" cy="39" rx="13" ry="4" transform="rotate(12 210 39)"/><ellipse cx="229" cy="25" rx="13" ry="4" transform="rotate(-34 229 25)"/><ellipse cx="52" cy="43" rx="11" ry="3.5" transform="rotate(-16 52 43)"/>
+      <ellipse cx="88" cy="53" rx="14" ry="4" transform="rotate(13 88 53)"/><ellipse cx="128" cy="48" rx="14" ry="4" transform="rotate(-17 128 48)"/><ellipse cx="171" cy="52" rx="13" ry="4" transform="rotate(20 171 52)"/><ellipse cx="200" cy="51" rx="12" ry="4" transform="rotate(-15 200 51)"/>
+    </g>
+    <path d="M19 55q127 54 256-1" fill="none" stroke="#fff8e9" stroke-opacity=".8" stroke-width="3"/>
+  </g>
+  <!-- rice stalk -->
+  <g transform="translate(646 115) rotate(13)" fill="none" stroke="#ae8d4d" stroke-linecap="round">
+    <path d="M28 0q-9 116 18 235" stroke-width="3"/>
+    <path d="M35 47q-43-8-52-32M37 72q42-11 52-36M38 98q-42-6-55-28M40 124q39-7 51-31M43 150q-38-5-51-29M45 176q32-4 47-27" stroke-width="2"/>
+    <g fill="#cfad62" stroke="#ae8d4d" stroke-width="1.5">
+      <ellipse cx="-16" cy="14" rx="6" ry="14" transform="rotate(-30 -16 14)"/><ellipse cx="-4" cy="19" rx="6" ry="14" transform="rotate(-29 -4 19)"/><ellipse cx="65" cy="35" rx="6" ry="14" transform="rotate(30 65 35)"/><ellipse cx="78" cy="39" rx="6" ry="14" transform="rotate(30 78 39)"/>
+      <ellipse cx="-8" cy="61" rx="6" ry="14" transform="rotate(-30 -8 61)"/><ellipse cx="-20" cy="58" rx="6" ry="14" transform="rotate(-30 -20 58)"/><ellipse cx="71" cy="82" rx="6" ry="14" transform="rotate(30 71 82)"/><ellipse cx="84" cy="85" rx="6" ry="14" transform="rotate(30 84 85)"/>
+      <ellipse cx="-12" cy="91" rx="6" ry="14" transform="rotate(-30 -12 91)"/><ellipse cx="-24" cy="88" rx="6" ry="14" transform="rotate(-30 -24 88)"/><ellipse cx="71" cy="115" rx="6" ry="14" transform="rotate(30 71 115)"/><ellipse cx="84" cy="118" rx="6" ry="14" transform="rotate(30 84 118)"/>
+    </g>
+  </g>
+  <text x="64" y="666" font-family="Arial,sans-serif" font-size="12" letter-spacing="3" fill="#84765d">HİDAYETİ PRİNÇ · BASMATİ</text>
+</svg>
