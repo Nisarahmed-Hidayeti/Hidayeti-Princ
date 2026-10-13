@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en" data-asset-prefix="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2e9">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    /* Apply the saved theme before the stylesheet paints, with safe fallbacks for file:// previews. */
+    (function () {
+      var root = document.documentElement;
+      var preference = "system";
+      try {
+        var saved = localStorage.getItem("hidayeti-theme-preference");
+        if (saved === "dark" || saved === "light") preference = saved;
+      } catch (error) { /* Storage may be unavailable for local files; system mode still works. */ }
+      var prefersDark = !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      var theme = preference === "system" ? (prefersDark ? "dark" : "light") : preference;
+      root.setAttribute("data-theme-mode", preference);
+      root.setAttribute("data-theme", theme);
+      root.style.colorScheme = theme;
+    }());
+  </script>
+  <meta name="description" content="Explore Hidayeti Prinç Basmati rice products. Contact us on WhatsApp for information and quotes on 5 kg, 10 kg, 20 kg and 40 kg packs.">
+  <meta name="robots" content="index,follow">
+  <title>Hidayeti Prinç | Basmati Rice Products</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+  <link rel="preload" href="../assets/hero-rice.png" as="image" type="image/png">
+  <link id="siteStylesheet" rel="stylesheet" href="../styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hidayeti Prinç | Basmati Rice Products">
+  <meta property="og:description" content="Explore Hidayeti Prinç Basmati rice products. Contact us on WhatsApp for product information and quotes.">
+  <!-- Add the canonical URL and hreflang links after the production domain and URL structure are confirmed. -->
+</head>
+<body>
+  <div id="cssLoadWarning" role="alert" style="display:none;position:fixed;z-index:99999;top:12px;left:12px;right:12px;padding:14px 18px;border-radius:10px;background:#8c2330;color:#fff;font:600 14px/1.5 system-ui,sans-serif;box-shadow:0 8px 28px #0004;">Tasarım dosyası (styles.css) yüklenemedi. ZIP dosyasının tamamını bir klasöre çıkarın ve index.html dosyasını styles.css ile aynı klasörden açın. / The stylesheet could not be loaded. Extract the complete ZIP and keep index.html beside styles.css.</div>
+  <a class="skip-link" href="#main" data-i18n="skip">İçeriğe geç</a>
+  <header class="site-header" id="top">
+    <div class="header-inner wrap">
+      <a href="#top" class="brand" aria-label="Hidayeti Prinç ana sayfa">
+        <img src="../assets/logo.svg" alt="" width="48" height="48">
+        <span class="brand-copy"><strong>HİDAYETİ PRİNÇ</strong><small data-i18n="brandLine">BASMATİ PİRİNÇ</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Ana menü">
+        <a href="#products" data-i18n="navProducts">Ürünlerimiz</a>
+        <a href="#about" data-i18n="navAbout">Hakkımızda</a>
+        <a href="#contact" data-i18n="navContact">İletişim</a>
+      </nav>
+      <div class="header-actions">
+        <button class="language-switch" id="languageToggle" type="button" aria-label="Switch to English">
+          <span class="flag" aria-hidden="true">🇺🇸</span><span id="languageLabel">English</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.7 8.7 0 0 1 8.9 3.8 8.8 8.8 0 1 0 20.2 15.1Z"></path></svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.2M12 19.8V22M4.93 4.93l1.56 1.56m11.02 11.02 1.56 1.56M2 12h2.2m15.6 0H22M4.93 19.07l1.56-1.56M17.51 6.49l1.56-1.56"></path></svg>
+        </button>
+        <a class="header-whatsapp general-whatsapp" href="https://wa.me/905344641463?text=Merhaba%2C%20Hidayeti%20Prin%C3%A7%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" data-i18n="headerWhatsapp">WhatsApp <span aria-hidden="true">↗</span></a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Menüyü aç">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobil menü" hidden>
+      <a href="#products" data-i18n="navProducts">Ürünlerimiz</a>
+      <a href="#about" data-i18n="navAbout">Hakkımızda</a>
+      <a href="#contact" data-i18n="navContact">İletişim</a>
+      <a href="https://wa.me/905344641463?text=Merhaba%2C%20Hidayeti%20Prin%C3%A7%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="general-whatsapp" data-i18n="mobileWhatsapp">WhatsApp üzerinden ulaşın ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero-section">
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+      <div class="hero-grid wrap">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="heroEyebrow">HİDAYETİ PRİNÇ · BASMATİ</span></div>
+          <h1 data-i18n="heroTitle">Basmati pirinç ürünlerini <em>keşfedin.</em></h1>
+          <p class="hero-description" data-i18n="heroDescription">Hidayeti Prinç ve Buharı Prinç ürün seçeneklerini inceleyin. Ürün detayları ve fiyat bilgisi için bize doğrudan ulaşın.</p>
+          <div class="hero-actions">
+            <a href="#products" class="button button-dark" data-i18n="heroPrimary">Ürünleri keşfet <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet general-whatsapp" href="https://wa.me/905344641463?text=Merhaba%2C%20Hidayeti%20Prin%C3%A7%20Basmati%20pirin%C3%A7%20%C3%BCr%C3%BCnleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" data-i18n="heroSecondary"><span class="wa-dot" aria-hidden="true">◉</span> WhatsApp'tan bilgi al</a>
+          </div>
+          <div class="hero-footnote"><span class="footnote-mark" aria-hidden="true">✳</span><span data-i18n="heroFootnote">5 kg, 10 kg, 20 kg ve 40 kg paket seçenekleri</span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-stamp"><span data-i18n="stampTop">BASMATİ</span><span class="stamp-divider"></span><span data-i18n="stampBottom">PİRİNÇ</span></div>
+          <img class="hero-image" src="../assets/hero-rice.png" alt="Hidayeti Prinç Basmati pirinç ürün görseli" data-alt-tr="Hidayeti Prinç Basmati pirinç ürün görseli" data-alt-en="Hidayeti Prinç Basmati rice product visual">
+        </div>
+      </div>
+      <div class="hero-bottom wrap">
+        <div class="hero-note"><span class="note-number">01</span><span data-i18n="heroNoteOne">Ürün odaklı katalog</span></div>
+        <div class="hero-note"><span class="note-number">02</span><span data-i18n="heroNoteTwo">Türkçe & English</span></div>
+        <div class="hero-note"><span class="note-number">03</span><span data-i18n="heroNoteThree">WhatsApp ile iletişim</span></div>
+        <a href="#products" class="scroll-cue" aria-label="Ürünlere kaydır"><span data-i18n="scroll">AŞAĞI KAYDIR</span><span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="products-section section-pad" id="products">
+      <div class="wrap">
+        <div class="section-heading products-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="productsEyebrow">ÜRÜN KATALOĞU</span></div>
+            <h2 data-i18n="productsTitle">Size uygun <em>paketi</em> bulun.</h2>
+          </div>
+          <p data-i18n="productsIntro">Ürün ailelerini inceleyin, paket boyutunu seçin ve fiyat bilgisi için WhatsApp üzerinden bize ulaşın.</p>
+        </div>
+
+        <div class="catalog-tools">
+          <div class="family-tabs" role="group" aria-label="Ürün ailesi filtresi">
+            <button class="filter-chip is-active" type="button" data-family="all" data-i18n="filterAll" aria-pressed="true">Tüm ürünler <span class="chip-count" id="allCount">08</span></button>
+            <button class="filter-chip" type="button" data-family="hidayeti" data-i18n="filterHidayeti" aria-pressed="false">Hidayeti Prinç</button>
+            <button class="filter-chip" type="button" data-family="buhari" data-i18n="filterBuhari" aria-pressed="false">Buharı Prinç</button>
+          </div>
+          <div class="catalog-controls">
+            <label class="search-control"><span class="sr-only" data-i18n="searchLabel">Ürün ara</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input type="search" id="productSearch" data-placeholder-tr="Ürün ara..." data-placeholder-en="Search products..." placeholder="Ürün ara..." autocomplete="off"></label>
+            <label class="select-control"><span class="sr-only" data-i18n="sizeLabel">Paket boyutu</span><select id="weightFilter" aria-label="Paket boyutu"><option value="all" data-i18n="sizeAll">Tüm boyutlar</option><option value="5 kg">5 kg</option><option value="10 kg">10 kg</option><option value="20 kg">20 kg</option><option value="40 kg">40 kg</option></select><span aria-hidden="true">⌄</span></label>
+          </div>
+        </div>
+        <div class="catalog-status"><span id="resultsCount">8 ürün</span></div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <span class="empty-icon" aria-hidden="true">⌕</span>
+          <h3 data-i18n="emptyTitle">Ürün bulunamadı</h3>
+          <p data-i18n="emptyDescription">Aramanızı veya filtrelerinizi değiştirmeyi deneyin.</p>
+          <button type="button" class="text-button" id="resetFilters" data-i18n="resetFilters">Filtreleri temizle ↗</button>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="range-section section-pad" id="range">
+      <div class="wrap">
+        <div class="section-heading range-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="rangeEyebrow">BASMATİ ÜRÜN AİLESİ</span></div>
+            <h2 data-i18n="rangeTitle">Basmati pirinçte <em>net seçenekler.</em></h2>
+          </div>
+          <p data-i18n="rangeIntro">Hidayeti Prinç ve Buharı Prinç ürün ailelerini inceleyin. Paket seçenekleri ve ürün detayları için bizimle doğrudan iletişime geçin.</p>
+        </div>
+        <div class="range-layout">
+          <div class="range-photo-panel">
+            <img src="../assets/hero-rice.png" alt="Basmati pirinç ve pirinç taneleri" data-alt-tr="Basmati pirinç ve pirinç taneleri" data-alt-en="Basmati rice and rice grains" loading="lazy" width="900" height="700">
+            <div class="range-photo-label"><span data-i18n="rangePhotoLabel">PAKET SEÇENEKLERİ</span><strong>5 kg <i>·</i> 10 kg <i>·</i> 20 kg <i>·</i> 40 kg</strong></div>
+          </div>
+          <div class="range-points">
+            <article class="range-point">
+              <span class="range-point-number">01</span>
+              <div><h3 data-i18n="rangePointOneTitle">İki ürün ailesi</h3><p data-i18n="rangePointOneText">Hidayeti Prinç ve Buharı Prinç seçeneklerini tek bir katalogda karşılaştırın.</p></div>
+            </article>
+            <article class="range-point">
+              <span class="range-point-number">02</span>
+              <div><h3 data-i18n="rangePointTwoTitle">5 kg, 10 kg, 20 kg ve 40 kg</h3><p data-i18n="rangePointTwoText">Size uygun paket boyutunu seçin ve ürün detayları için bize ulaşın.</p></div>
+            </article>
+            <article class="range-point">
+              <span class="range-point-number">03</span>
+              <div><h3 data-i18n="rangePointThreeTitle">Doğrudan iletişim</h3><p data-i18n="rangePointThreeText">Fiyat, stok ve ürün bilgilerini WhatsApp üzerinden sorun; ayrıntıları işletmeyle doğrulayın.</p></div>
+            </article>
+            <a href="#products" class="range-link"><span data-i18n="rangeCta">Kataloğa dön</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="audience-section section-pad" id="customers">
+      <div class="wrap">
+        <div class="section-heading audience-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="audienceEyebrow">KİMLER İÇİN?</span></div>
+            <h2 data-i18n="audienceTitle">İhtiyacınız ne olursa olsun, <em>ürünlerden başlayın.</em></h2>
+          </div>
+          <p data-i18n="audienceIntro">Bireysel müşteriler, işletmeler ve toptan alım yapanlar ürün seçeneklerini inceleyebilir ve detayları doğrudan sorabilir.</p>
+        </div>
+        <div class="audience-grid">
+          <article class="audience-card audience-card-home">
+            <span class="audience-number">01 / HOME</span>
+            <div class="audience-icon" aria-hidden="true">⌂</div>
+            <h3 data-i18n="audienceHomeTitle">Bireysel müşteriler</h3>
+            <p data-i18n="audienceHomeText">Paket seçeneklerine göz atın ve size uygun ürünle ilgili bilgi isteyin.</p>
+            <a href="#products" class="audience-link"><span data-i18n="audienceProductsCta">Ürünleri incele</span><span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="audience-card audience-card-wholesale">
+            <span class="audience-number">02 / WHOLESALE</span>
+            <div class="audience-icon" aria-hidden="true">▤</div>
+            <h3 data-i18n="audienceWholesaleTitle">Toptan alım yapanlar</h3>
+            <p data-i18n="audienceWholesaleText">Ürün seçenekleri, paketler ve fiyatlandırma hakkında doğrudan görüşün.</p>
+            <a href="#contact" class="audience-link"><span data-i18n="audienceContactCta">İletişime geç</span><span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="audience-card audience-card-business">
+            <span class="audience-number">03 / BUSINESS</span>
+            <div class="audience-icon" aria-hidden="true">▦</div>
+            <h3 data-i18n="audienceBusinessTitle">İşletmeler</h3>
+            <p data-i18n="audienceBusinessText">Ürün bilgisi ve teklif talebinizi Hidayeti Prinç ekibine iletin.</p>
+            <a href="#contact" class="audience-link"><span data-i18n="audienceContactCta">İletişime geç</span><span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section section-pad" id="how-to-order">
+      <div class="wrap how-layout">
+        <div class="how-intro">
+          <div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span><span data-i18n="howEyebrow">BASİT VE DOĞRUDAN</span></div>
+          <h2 data-i18n="howTitle">Ürünü seçin. <em>Bizimle konuşun.</em></h2>
+          <p data-i18n="howIntro">Site üzerinden ödeme yok. Ürün seçiminizi yapın, WhatsApp'tan sorun ve ayrıntıları doğrudan netleştirin.</p>
+          <a class="button button-cream general-whatsapp" href="https://wa.me/905344641463" target="_blank" rel="noopener noreferrer" data-i18n="howCta">WhatsApp'tan iletişime geç <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="how-steps">
+          <article class="how-step"><span class="how-step-number">01</span><div><h3 data-i18n="howStepOneTitle">Ürünleri keşfedin</h3><p data-i18n="howStepOneText">Katalogda Hidayeti Prinç ve Buharı Prinç seçeneklerini inceleyin.</p></div><span class="how-step-arrow" aria-hidden="true">↘</span></article>
+          <article class="how-step"><span class="how-step-number">02</span><div><h3 data-i18n="howStepTwoTitle">Paketinizi seçin</h3><p data-i18n="howStepTwoText">5 kg, 10 kg, 20 kg veya 40 kg seçeneğini açın ve ürünle ilgili bilgileri görüntüleyin.</p></div><span class="how-step-arrow" aria-hidden="true">↘</span></article>
+          <article class="how-step"><span class="how-step-number">03</span><div><h3 data-i18n="howStepThreeTitle">WhatsApp'tan sorun</h3><p data-i18n="howStepThreeText">Ürün adı hazır mesajda yer alır. Mesajı kontrol edip gönderin; fiyat ve uygunluk bilgisini doğrudan alın.</p></div><span class="how-step-arrow" aria-hidden="true">✓</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="brand-section section-pad" id="about">
+      <div class="wrap brand-grid">
+        <div class="brand-visual">
+          <div class="brand-visual-card">
+            <div class="brand-card-top"><span data-i18n="brandCardLabel">HİDAYETİ PRİNÇ</span><span aria-hidden="true">✳</span></div>
+            <img src="../assets/logo.svg" alt="Hidayeti Prinç sembolü" width="86" height="86">
+            <p data-i18n="brandCardLine">Basmati pirinç ürünleri</p>
+            <span class="brand-card-bottom" data-i18n="brandCardBottom">MARKA HİKÂYESİ BURADA</span>
+          </div>
+          <div class="decorative-grain grain-a" aria-hidden="true"></div><div class="decorative-grain grain-b" aria-hidden="true"></div>
+        </div>
+        <div class="brand-copy-main">
+          <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="aboutEyebrow">MARKAMIZ</span></div>
+          <h2 data-i18n="aboutTitle">Hidayeti Prinç'i <em>tanıyın.</em></h2>
+          <p class="brand-lead" data-i18n="aboutLead">Basmati pirinç ürünlerimizi keşfedin; ihtiyacınıza uygun paket seçeneği için bizimle iletişime geçin.</p>
+          <p class="brand-body" data-i18n="aboutBody">Bu alan, işletmenizin gerçek hikâyesi, üretim yaklaşımı ve ürünleri hakkında sağlayacağınız bilgilerle güncellenecek. Yayına almadan önce bu metni kendi şirket anlatımınızla değiştirin.</p>
+          <a class="underlined-link" href="#contact"><span data-i18n="aboutCta">Bize ulaşın</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="wrap brand-facts">
+        <article class="brand-fact"><span>01</span><div><h3 data-i18n="brandFactOneTitle">Ürün odaklı yaklaşım</h3><p data-i18n="brandFactOneText">Ürün aileleri ve paket bilgileri kolayca görüntülenebilir.</p></div></article>
+        <article class="brand-fact"><span>02</span><div><h3 data-i18n="brandFactTwoTitle">Açık ürün bilgisi</h3><p data-i18n="brandFactTwoText">Gerçek ürün detayları, teknik bilgiler ve fotoğraflar burada güncellenebilir.</p></div></article>
+        <article class="brand-fact"><span>03</span><div><h3 data-i18n="brandFactThreeTitle">Doğrudan iletişim</h3><p data-i18n="brandFactThreeText">Fiyat ve ürün soruları doğrudan WhatsApp üzerinden iletilebilir.</p></div></article>
+      </div>
+    </section>
+
+    <section class="faq-section section-pad" id="faq">
+      <div class="wrap">
+        <div class="section-heading faq-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="faqEyebrow">FREQUENTLY ASKED QUESTIONS</span></div>
+            <h2 data-i18n="faqTitle">A few helpful <em>answers.</em></h2>
+          </div>
+          <p data-i18n="faqIntro">Quick answers about product options, pricing, and how to contact us.</p>
+        </div>
+        <div class="faq-grid">
+          <details class="faq-item"><summary data-i18n="faqQuestionProducts">Which Basmati rice products are available?</summary><p data-i18n="faqAnswerProducts">The catalogue includes the Hidayeti Prinç and Buharı Prinç product ranges in 5 kg, 10 kg, 20 kg and 40 kg packs.</p></details>
+          <details class="faq-item"><summary data-i18n="faqQuestionPrice">How can I ask about pricing?</summary><p data-i18n="faqAnswerPrice">Click the WhatsApp button on the product you are interested in. The product name is added to a draft message; send it to ask for current pricing.</p></details>
+          <details class="faq-item"><summary data-i18n="faqQuestionWholesale">Can wholesale buyers get in touch?</summary><p data-i18n="faqAnswerWholesale">Individual customers, businesses, and wholesale buyers can contact us directly for product information and quote requests.</p></details>
+          <details class="faq-item"><summary data-i18n="faqQuestionOrder">Can I pay directly on the website?</summary><p data-i18n="faqAnswerOrder">This website is designed for product browsing and direct contact. Confirm prices, availability, and delivery details with us on WhatsApp before ordering.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section-pad" id="contact">
+      <div class="wrap contact-panel">
+        <div class="contact-decoration" aria-hidden="true"><span class="contact-circle circle-one"></span><span class="contact-circle circle-two"></span><img src="../assets/logo.svg" alt="" width="65" height="65"></div>
+        <div class="contact-copy">
+          <div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span><span data-i18n="contactEyebrow">İLETİŞİM</span></div>
+          <h2 data-i18n="contactTitle">Bir ürün hakkında <em>konuşalım.</em></h2>
+          <p data-i18n="contactDescription">Ürün detayları ve fiyat teklifi için bize WhatsApp'tan yazın. Mesajınızı birlikte netleştirelim.</p>
+          <div class="contact-actions">
+            <a class="button button-cream general-whatsapp" href="https://wa.me/905344641463?text=Merhaba%2C%20Hidayeti%20Prin%C3%A7%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" data-i18n="contactWhatsapp">WhatsApp'tan yazın <span aria-hidden="true">↗</span></a>
+            <a class="contact-phone" href="tel:+905344641463"><span data-i18n="phoneLabel">Telefon / WhatsApp</span><strong>+90 534 464 1463</strong></a>
+          </div>
+        </div>
+        <div class="contact-side-note"><span class="side-note-mark">✳</span><p data-i18n="contactSideNote">Hidayeti Prinç<br> Basmati pirinç ürünleri</p><span class="side-note-rule"></span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-main">
+      <a href="#top" class="brand footer-brand"><img src="../assets/logo.svg" alt="" width="43" height="43"><span class="brand-copy"><strong>HİDAYETİ PRİNÇ</strong><small data-i18n="brandLine">BASMATİ PİRİNÇ</small></span></a>
+      <p data-i18n="footerLine">Basmati pirinç ürünlerini keşfedin.</p>
+      <div class="footer-nav"><a href="#products" data-i18n="navProducts">Ürünlerimiz</a><a href="#about" data-i18n="navAbout">Hakkımızda</a><a href="#contact" data-i18n="navContact">İletişim</a></div>
+    </div>
+    <div class="wrap footer-bottom"><span>© <span id="currentYear"></span> Hidayeti Prinç</span><a href="#top" class="back-top"><span data-i18n="backTop">Yukarı dön</span> ↑</a></div>
+  </footer>
+
+  <a class="floating-whatsapp general-whatsapp" href="https://wa.me/905344641463" target="_blank" rel="noopener noreferrer" aria-label="Contact Hidayeti Prinç on WhatsApp">
+    <span class="floating-wa-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.4 3.6A11.7 11.7 0 0 0 2 17.7L.5 23.2l5.6-1.5A11.7 11.7 0 0 0 20.4 3.6ZM12 21a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.3.9.9-3.2-.2-.5A9.7 9.7 0 1 1 12 21Zm5.3-7.3c-.3-.1-1.6-.8-1.9-.9-.2-.1-.5-.1-.6.2-.2.2-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.2-1.4-.8-.7-1.3-1.5-1.5-1.8-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4H8c-.2 0-.5.1-.7.4-.2.2-.9.9-.9 2.2s1 2.5 1.1 2.7c.7 1.2 1.9 2.2 3.4 2.9 1.1.5 2.2.7 3 .5.6-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/></svg></span>
+    <span data-i18n="floatingWhatsapp">WhatsApp'tan yazın</span><span class="floating-arrow" aria-hidden="true">↗</span>
+  </a>
+
+  <dialog class="product-dialog" id="productDialog" aria-labelledby="dialogTitle">
+    <button class="dialog-close" id="dialogClose" type="button" aria-label="Close dialog">×</button>
+    <div class="dialog-content" id="dialogContent"></div>
+  </dialog>
+
+  <script>
+    window.addEventListener("load", function () {
+      var stylesheet = document.getElementById("siteStylesheet");
+      var warning = document.getElementById("cssLoadWarning");
+      if (stylesheet && !stylesheet.sheet && warning) warning.style.display = "block";
+    });
+  </script>
+  <script src="../data/products.js"></script>
+  <script src="../app.js"></script>
+</body>
+</html>
