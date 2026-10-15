@@ -1826,3 +1826,70 @@ html[data-theme="light"] img:not(.logo-image):not(.whatsapp-icon) { image-render
 @media (prefers-reduced-motion: reduce) {
   html[data-theme="light"] * { scroll-behavior: auto !important; }
 }
+
+/* V2.0 — mobile-first polish: compact header, tighter hero, shorter page flow. */
+@media (max-width: 760px) {
+  .header-inner { min-height: 66px; gap: 8px; }
+  .brand { gap: 7px; }
+  .brand img { width: 34px; height: 34px; border-radius: 10px; }
+  .brand-copy strong { font-size: 9px; letter-spacing: .075em; }
+  .brand-copy small { font-size: 6px; letter-spacing: .13em; }
+  .header-actions { gap: 8px; }
+  .language-switch { gap: 4px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--paper) 88%, transparent); font-size: 10px; }
+  .flag { font-size: 12px; }
+  .theme-toggle, .mobile-menu-toggle { width: 34px; height: 34px; }
+  .mobile-menu-toggle { border-radius: 9px; }
+  .hero-grid { gap: 18px; padding-top: 30px; padding-bottom: 22px; }
+  .hero-copy h1 { max-width: 500px; margin: 13px 0 11px; font-size: clamp(38px, 10.4vw, 52px); line-height: 1.02; letter-spacing: -.035em; }
+  .hero-description { max-width: 520px; margin-bottom: 16px; font-size: 12px; line-height: 1.65; }
+  .hero-actions { display: grid; grid-template-columns: 1fr; gap: 8px; }
+  .hero-actions .button { min-height: 44px; width: 100%; justify-content: center; padding-inline: 14px; font-size: 11px; }
+  .hero-footnote { margin-top: 14px; font-size: 10px; }
+  .hero-visual { max-width: 560px; margin-inline: auto; }
+  .hero-image { width: 100%; max-height: 390px; object-fit: cover; object-position: center; border-radius: 18px 18px 42px 18px; }
+  .hero-bottom { padding-block: 14px; gap: 8px 12px; }
+  .hero-note { font-size: 9px; }
+  .section-pad { padding-block: 58px; }
+  .products-section.section-pad { padding-top: 54px; }
+  .section-heading { margin-bottom: 20px; }
+  .section-heading h2, .brand-copy-main h2 { font-size: clamp(32px, 8.7vw, 42px); line-height: 1.08; }
+  .catalog-tools { gap: 11px; }
+  .product-grid { gap: 9px; }
+  .product-info { padding: 10px 9px; }
+  .product-info h3 { font-size: 14px; }
+  .product-description { font-size: 9px; line-height: 1.55; }
+  .brand-section.section-pad { padding-block: 56px; }
+  .brand-grid { gap: 30px; }
+  .brand-visual { min-height: 260px; }
+  .brand-visual-card { min-height: 255px; padding: 22px; }
+  .brand-facts { gap: 12px; margin-top: 30px; }
+  .contact-section { padding-top: 0; padding-bottom: 42px; }
+  .contact-panel { padding: 26px 20px 23px; }
+  .contact-decoration { margin-bottom: 15px; }
+  .contact-copy h2 { font-size: clamp(31px, 8.5vw, 40px); }
+  .site-footer { padding-top: 23px; }
+  .floating-whatsapp { right: 12px; bottom: calc(14px + env(safe-area-inset-bottom)); min-height: 46px; padding: 9px 13px; gap: 8px; font-size: 11px; box-shadow: 0 7px 24px rgba(7, 35, 19, .25); }
+  .floating-wa-icon { width: 26px; height: 26px; }
+  .floating-arrow { font-size: 14px; }
+}
+@media (max-width: 390px) {
+  .wrap { width: calc(100% - 30px); }
+  .brand-copy strong { font-size: 8px; }
+  .brand-copy small { font-size: 5.5px; }
+  .header-actions { gap: 6px; }
+  .language-switch { padding: 5px 6px; font-size: 9px; }
+  .theme-toggle, .mobile-menu-toggle { width: 31px; height: 31px; }
+  .hero-grid { padding-top: 25px; }
+  .hero-copy h1 { font-size: clamp(36px, 10vw, 43px); }
+  .hero-image { max-height: 330px; }
+  .floating-whatsapp { right: 9px; bottom: calc(10px + env(safe-area-inset-bottom)); }
+}
+@media (max-width: 760px) {
+  .header-actions > .header-whatsapp { display: none !important; }
+  .header-actions .language-switch { min-height: 32px; padding: 4px 8px !important; border-radius: 999px !important; font-size: 10px !important; box-shadow: none !important; transform: none !important; }
+  .header-actions .theme-toggle { flex: 0 0 34px; }
+}
+@media (max-width: 390px) {
+  .header-actions .language-switch { max-width: 78px; overflow: hidden; }
+  .header-actions .language-switch #languageLabel { font-size: 9px; }
+}
