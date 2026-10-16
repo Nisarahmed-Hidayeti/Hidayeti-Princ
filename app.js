@@ -11,7 +11,7 @@
       heroEyebrow: "HİDAYETİ PRİNÇ · BASMATİ", heroTitle: "Basmati pirinç ürünlerini <em>keşfedin.</em>",
       heroDescription: "Hidayeti Prinç ve Buharı Prinç ürün seçeneklerini inceleyin. Ürün detayları ve fiyat bilgisi için bize doğrudan ulaşın.",
       heroPrimary: "Ürünleri keşfet <span aria-hidden=\"true\">↓</span>", heroSecondary: "<svg class='whatsapp-icon' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M20.52 3.48A11.75 11.75 0 0 0 2.03 17.62L.5 23.5l6.02-1.58a11.75 11.75 0 0 0 14-18.44ZM12 21.1a9.1 9.1 0 0 1-4.64-1.27l-.34-.2-3.57.94.95-3.48-.22-.36A9.1 9.1 0 1 1 12 21.1Zm5-6.82c-.27-.14-1.62-.8-1.87-.89-.25-.1-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.28s.98 2.64 1.12 2.82c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.65.21 1.24.18 1.71.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32Z' fill='currentColor'/></svg> WhatsApp'tan bilgi al",
-      heroFootnote: "5 kg, 10 kg, 20 kg ve 40 kg paket seçenekleri", stampTop: "BASMATİ", stampBottom: "PİRİNÇ", imageCaption: "Basmati pirinç ürünleri",
+      heroFootnote: "5 kg, 10 kg ve 40 kg paket seçenekleri", stampTop: "BASMATİ", stampBottom: "PİRİNÇ", imageCaption: "Basmati pirinç ürünleri",
       heroNoteOne: "Ürün odaklı katalog", heroNoteTwo: "Türkçe & English", heroNoteThree: "WhatsApp ile iletişim", scroll: "AŞAĞI KAYDIR",
       productsEyebrow: "ÜRÜN KATALOĞU", productsTitle: "Size uygun <em>paketi</em> bulun.",
       productsIntro: "Ürün ailelerini inceleyin, paket boyutunu seçin ve fiyat bilgisi için WhatsApp üzerinden bize ulaşın.",
@@ -22,7 +22,7 @@
       rangeEyebrow: "BASMATİ ÜRÜN AİLESİ", rangeTitle: "Basmati pirinçte <em>net seçenekler.</em>",
       rangeIntro: "Hidayeti Prinç ve Buharı Prinç ürün ailelerini inceleyin. Paket seçenekleri ve ürün detayları için bizimle doğrudan iletişime geçin.",
       rangePhotoLabel: "PAKET SEÇENEKLERİ", rangePointOneTitle: "İki ürün ailesi", rangePointOneText: "Hidayeti Prinç ve Buharı Prinç seçeneklerini tek bir katalogda karşılaştırın.",
-      rangePointTwoTitle: "5 kg, 10 kg, 20 kg ve 40 kg", rangePointTwoText: "Size uygun paket boyutunu seçin ve ürün detayları için bize ulaşın.",
+      rangePointTwoTitle: "5 kg, 10 kg ve 40 kg", rangePointTwoText: "Size uygun paket boyutunu seçin ve ürün detayları için bize ulaşın.",
       rangePointThreeTitle: "Doğrudan iletişim", rangePointThreeText: "Fiyat, stok ve ürün bilgilerini WhatsApp üzerinden sorun; ayrıntıları işletmeyle doğrulayın.", rangeCta: "Kataloğa dön",
       audienceEyebrow: "KİMLER İÇİN?", audienceTitle: "İhtiyacınız ne olursa olsun, <em>ürünlerden başlayın.</em>",
       audienceIntro: "Bireysel müşteriler, işletmeler ve toptan alım yapanlar ürün seçeneklerini inceleyebilir ve detayları doğrudan sorabilir.",
@@ -33,7 +33,7 @@
       howEyebrow: "BASİT VE DOĞRUDAN", howTitle: "Ürünü seçin. <em>Bizimle konuşun.</em>",
       howIntro: "Site üzerinden ödeme yok. Ürün seçiminizi yapın, WhatsApp'tan sorun ve ayrıntıları doğrudan netleştirin.", howCta: "<svg class='whatsapp-icon' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M20.52 3.48A11.75 11.75 0 0 0 2.03 17.62L.5 23.5l6.02-1.58a11.75 11.75 0 0 0 14-18.44ZM12 21.1a9.1 9.1 0 0 1-4.64-1.27l-.34-.2-3.57.94.95-3.48-.22-.36A9.1 9.1 0 1 1 12 21.1Zm5-6.82c-.27-.14-1.62-.8-1.87-.89-.25-.1-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.28s.98 2.64 1.12 2.82c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.65.21 1.24.18 1.71.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32Z' fill='currentColor'/></svg> WhatsApp'tan iletişime geç",
       howStepOneTitle: "Ürünleri keşfedin", howStepOneText: "Katalogda Hidayeti Prinç ve Buharı Prinç seçeneklerini inceleyin.",
-      howStepTwoTitle: "Paketinizi seçin", howStepTwoText: "5 kg, 10 kg, 20 kg veya 40 kg seçeneğini açın ve ürünle ilgili bilgileri görüntüleyin.",
+      howStepTwoTitle: "Paketinizi seçin", howStepTwoText: "5 kg, 10 kg veya 40 kg seçeneğini açın ve ürünle ilgili bilgileri görüntüleyin.",
       howStepThreeTitle: "WhatsApp'tan sorun", howStepThreeText: "Ürün adı hazır mesajda yer alır. Mesajı kontrol edip gönderin; fiyat ve uygunluk bilgisini doğrudan alın.",
       brandFactOneTitle: "Ürün odaklı yaklaşım", brandFactOneText: "Ürün aileleri ve paket bilgileri kolayca görüntülenebilir.",
       brandFactTwoTitle: "Açık ürün bilgisi", brandFactTwoText: "Gerçek ürün detayları, teknik bilgiler ve fotoğraflar burada güncellenebilir.",
@@ -41,9 +41,9 @@
       aboutEyebrow: "MARKAMIZ", aboutTitle: "Hidayeti Prinç'i <em>tanıyın.</em>",
       aboutLead: "Hidayeti Prinç olarak Basmati pirinç ürünlerimizi anlaşılır ürün bilgileri ve farklı paket seçenekleriyle müşterilerimize sunuyoruz.",
       aboutBody: "Hidayeti Prinç ve Buharı Prinç Basmati ürün ailelerini farklı paket boyutlarıyla tek bir katalogda buluşturuyoruz. Güncel fiyat, stok ve teslimat ayrıntıları için WhatsApp üzerinden bizimle iletişime geçebilirsiniz.",
-      aboutCta: "Bize ulaşın", brandCardLabel: "HİDAYETİ PRİNÇ", brandCardLine: "Basmati pirinç üreticisi", brandCardBottom: "BASMATİ · 5 / 10 / 20 / 40 KG",
+      aboutCta: "Bize ulaşın", brandCardLabel: "HİDAYETİ PRİNÇ", brandCardLine: "Basmati pirinç üreticisi", brandCardBottom: "BASMATİ · 5 / 10 / 40 KG",
       faqEyebrow: "SIK SORULAN SORULAR", faqTitle: "Aklınızdaki sorulara <em>yanıt bulalım.</em>", faqIntro: "Ürün seçenekleri, fiyat bilgisi ve iletişim süreci hakkında kısa yanıtlar.",
-      faqQuestionProducts: "Hangi Basmati pirinç ürünleri mevcut?", faqAnswerProducts: "Katalogda Hidayeti Prinç ve Buharı Prinç ürün ailelerinin 5 kg, 10 kg, 20 kg ve 40 kg seçenekleri yer alıyor.",
+      faqQuestionProducts: "Hangi Basmati pirinç ürünleri mevcut?", faqAnswerProducts: "Hidayeti Prinç 5 ve 10 kg; Buharı Prinç 5, 10 ve 40 kg paketlerde sunuluyor.",
       faqQuestionPrice: "Fiyat bilgisini nasıl alabilirim?", faqAnswerPrice: "İlgilendiğiniz ürünün WhatsApp düğmesine tıklayın. Ürün adı hazır mesaja eklenir; güncel fiyatı sormak için mesajı gönderin.",
       faqQuestionWholesale: "Toptan alım için iletişime geçebilir miyim?", faqAnswerWholesale: "Bireysel müşteriler, işletmeler ve toptan alım yapanlar ürün bilgisi ve fiyat teklifi için doğrudan bizimle görüşebilir.",
       faqQuestionOrder: "Web sitesinden ödeme yapabilir miyim?", faqAnswerOrder: "Bu site ürün kataloğu ve iletişim için tasarlanmıştır. Fiyat, stok ve teslimat ayrıntılarını sipariş öncesinde WhatsApp üzerinden görüşebilirsiniz.",
@@ -56,7 +56,7 @@
       dialogWhatsapp: "WhatsApp'tan bilgi ve fiyat alın", languageName: "English", languageFlag: "🇺🇸", languageAria: "Switch to English",
       resultSingular: "ürün", resultPlural: "ürün", searchPlaceholder: "Ürün ara...", familyHidayeti: "HİDAYETİ PRİNÇ", familyBuhari: "BUHARI PRİNÇ",
       generalMessage: "Merhaba, Hidayeti Prinç Basmati pirinç ürünleri hakkında bilgi ve fiyat almak istiyorum.", productMessagePrefix: "Merhaba, ", productMessageSuffix: " ürünü hakkında bilgi ve fiyat almak istiyorum.",
-      themeToDark: "Koyu temaya geç", themeToLight: "Açık temaya geç", pageTitle: "Hidayeti Prinç | Basmati Pirinç Ürünleri", pageDescription: "Hidayeti Prinç Basmati pirinç ürünlerini keşfedin. 5 kg, 10 kg, 20 kg ve 40 kg ürün seçenekleri hakkında bilgi ve fiyat için WhatsApp'tan bize ulaşın."
+      themeToDark: "Koyu temaya geç", themeToLight: "Açık temaya geç", pageTitle: "Hidayeti Prinç | Basmati Pirinç Ürünleri", pageDescription: "Hidayeti Prinç Basmati pirinç ürünlerini keşfedin. 5 kg, 10 kg ve 40 kg ürün seçenekleri hakkında bilgi ve fiyat için WhatsApp'tan bize ulaşın."
     },
     en: {
       skip: "Skip to content", brandLine: "BASMATI RICE", navProducts: "Our products", navAbout: "About us", navFaq: "FAQ", navContact: "Contact",
@@ -64,7 +64,7 @@
       heroEyebrow: "HIDAYETI PRINÇ · BASMATI", heroTitle: "Discover our <em>Basmati rice.</em>",
       heroDescription: "Explore Hidayeti Prinç and Buharı Prinç product options. Contact us directly for product details and a quote.",
       heroPrimary: "Explore products <span aria-hidden=\"true\">↓</span>", heroSecondary: "<svg class='whatsapp-icon' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M20.52 3.48A11.75 11.75 0 0 0 2.03 17.62L.5 23.5l6.02-1.58a11.75 11.75 0 0 0 14-18.44ZM12 21.1a9.1 9.1 0 0 1-4.64-1.27l-.34-.2-3.57.94.95-3.48-.22-.36A9.1 9.1 0 1 1 12 21.1Zm5-6.82c-.27-.14-1.62-.8-1.87-.89-.25-.1-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.28s.98 2.64 1.12 2.82c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.65.21 1.24.18 1.71.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32Z' fill='currentColor'/></svg> Ask us on WhatsApp",
-      heroFootnote: "Available in 5 kg, 10 kg, 20 kg and 40 kg packs", stampTop: "BASMATI", stampBottom: "RICE", imageCaption: "Basmati rice products",
+      heroFootnote: "Available in 5 kg, 10 kg and 40 kg packs", stampTop: "BASMATI", stampBottom: "RICE", imageCaption: "Basmati rice products",
       heroNoteOne: "Product-focused catalogue", heroNoteTwo: "Turkish & English", heroNoteThree: "Contact via WhatsApp", scroll: "SCROLL TO EXPLORE",
       productsEyebrow: "PRODUCT CATALOGUE", productsTitle: "Find your <em>pack size.</em>",
       productsIntro: "Browse our product ranges, choose a pack size, and contact us on WhatsApp for pricing.",
@@ -75,7 +75,7 @@
       rangeEyebrow: "THE BASMATI RANGE", rangeTitle: "Clear choices for <em>Basmati rice.</em>",
       rangeIntro: "Explore the Hidayeti Prinç and Buharı Prinç ranges. Contact us directly for pack options and product details.",
       rangePhotoLabel: "AVAILABLE PACK SIZES", rangePointOneTitle: "Two product ranges", rangePointOneText: "Browse Hidayeti Prinç and Buharı Prinç options in one catalogue.",
-      rangePointTwoTitle: "5 kg, 10 kg, 20 kg and 40 kg", rangePointTwoText: "Choose the pack size that suits you and contact us for product details.",
+      rangePointTwoTitle: "5 kg, 10 kg and 40 kg", rangePointTwoText: "Choose the pack size that suits you and contact us for product details.",
       rangePointThreeTitle: "Direct contact", rangePointThreeText: "Ask about pricing, availability, and product details on WhatsApp; confirm details directly with the business.", rangeCta: "Back to catalogue",
       audienceEyebrow: "WHO WE SERVE", audienceTitle: "Whatever your needs, <em>start with the products.</em>",
       audienceIntro: "Individual customers, businesses, and wholesale buyers can explore the range and ask us directly for details.",
@@ -86,7 +86,7 @@
       howEyebrow: "SIMPLE AND DIRECT", howTitle: "Choose a product. <em>Talk to us.</em>",
       howIntro: "There is no online checkout. Choose a product, ask us on WhatsApp, and confirm the details directly.", howCta: "<svg class='whatsapp-icon' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M20.52 3.48A11.75 11.75 0 0 0 2.03 17.62L.5 23.5l6.02-1.58a11.75 11.75 0 0 0 14-18.44ZM12 21.1a9.1 9.1 0 0 1-4.64-1.27l-.34-.2-3.57.94.95-3.48-.22-.36A9.1 9.1 0 1 1 12 21.1Zm5-6.82c-.27-.14-1.62-.8-1.87-.89-.25-.1-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.28s.98 2.64 1.12 2.82c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.65.21 1.24.18 1.71.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32Z' fill='currentColor'/></svg> Contact us on WhatsApp",
       howStepOneTitle: "Explore the products", howStepOneText: "Browse Hidayeti Prinç and Buharı Prinç options in the catalogue.",
-      howStepTwoTitle: "Choose your pack", howStepTwoText: "Choose a 5 kg, 10 kg, 20 kg or 40 kg pack to see its product information.",
+      howStepTwoTitle: "Choose your pack", howStepTwoText: "Choose a 5 kg, 10 kg or 40 kg pack to see its product information.",
       howStepThreeTitle: "Ask on WhatsApp", howStepThreeText: "The product name is included in a draft message. Review and send it to ask directly about pricing and availability.",
       brandFactOneTitle: "Product-focused", brandFactOneText: "Product ranges and pack information are easy to browse.",
       brandFactTwoTitle: "Clear product details", brandFactTwoText: "Real product details, specifications, and photographs can be updated here.",
@@ -94,9 +94,9 @@
       aboutEyebrow: "ABOUT THE BRAND", aboutTitle: "Get to know <em>Hidayeti Prinç.</em>",
       aboutLead: "As a rice manufacturer, Hidayeti Prinç brings its Basmati rice product ranges together with clear information and practical pack options.",
       aboutBody: "We bring the Hidayeti Prinç and Buharı Prinç Basmati ranges together in one catalogue with multiple pack sizes. Contact us on WhatsApp for current prices, availability, and delivery details.",
-      aboutCta: "Get in touch", brandCardLabel: "HIDAYETI PRINÇ", brandCardLine: "Basmati rice manufacturer", brandCardBottom: "BASMATI · 5 / 10 / 20 / 40 KG",
+      aboutCta: "Get in touch", brandCardLabel: "HIDAYETI PRINÇ", brandCardLine: "Basmati rice manufacturer", brandCardBottom: "BASMATI · 5 / 10 / 40 KG",
       faqEyebrow: "FREQUENTLY ASKED QUESTIONS", faqTitle: "A few helpful <em>answers.</em>", faqIntro: "Quick answers about product options, pricing, and how to contact us.",
-      faqQuestionProducts: "Which Basmati rice products are available?", faqAnswerProducts: "The catalogue includes the Hidayeti Prinç and Buharı Prinç product ranges in 5 kg, 10 kg, 20 kg and 40 kg packs.",
+      faqQuestionProducts: "Which Basmati rice products are available?", faqAnswerProducts: "Hidayeti Prinç is available in 5 and 10 kg packs; Buharı Prinç in 5, 10 and 40 kg packs.",
       faqQuestionPrice: "How can I ask about pricing?", faqAnswerPrice: "Click the WhatsApp button on the product you are interested in. The product name is added to a draft message; send it to ask for current pricing.",
       faqQuestionWholesale: "Can wholesale buyers get in touch?", faqAnswerWholesale: "Individual customers, businesses, and wholesale buyers can contact us directly for product information and quote requests.",
       faqQuestionOrder: "Can I pay directly on the website?", faqAnswerOrder: "This website is designed for product browsing and direct contact. Confirm prices, availability, and delivery details with us on WhatsApp before ordering.",
@@ -109,7 +109,7 @@
       dialogWhatsapp: "Ask for details and a quote on WhatsApp", languageName: "Türkçe", languageFlag: "🇹🇷", languageAria: "Türkçe'ye geç",
       resultSingular: "product", resultPlural: "products", searchPlaceholder: "Search products...", familyHidayeti: "HIDAYETI PRINÇ", familyBuhari: "BUHARI PRINÇ",
       generalMessage: "Hello, I would like information and a quote for Hidayeti Prinç Basmati rice products.", productMessagePrefix: "Hello, I would like information and a quote for ", productMessageSuffix: ".",
-      themeToDark: "Switch to dark mode", themeToLight: "Switch to light mode", pageTitle: "Hidayeti Prinç | Basmati Rice Products", pageDescription: "Explore Hidayeti Prinç Basmati rice products. Contact us on WhatsApp for information and quotes on 5 kg, 10 kg, 20 kg and 40 kg packs."
+      themeToDark: "Switch to dark mode", themeToLight: "Switch to light mode", pageTitle: "Hidayeti Prinç | Basmati Rice Products", pageDescription: "Explore Hidayeti Prinç Basmati rice products. Contact us on WhatsApp for information and quotes on 5 kg, 10 kg and 40 kg packs."
     }
   };
 
@@ -217,14 +217,15 @@
       return matchesFamily && matchesWeight && (!query || searchable.includes(query));
     });
 
-    grid.innerHTML = filtered.map((product) => `
-      <article class="product-card" data-product-id="${escapeHtml(product.id)}">
+    grid.innerHTML = filtered.map((product, index) => `
+      <article class="product-card" style="--card-order:${index}" data-product-id="${escapeHtml(product.id)}">
         <div class="product-image-wrap">
           <div class="package-flip" tabindex="0" role="button" aria-label="${escapeHtml(state.lang === "tr" ? "Ambalajın ön ve arka yüzünü değiştir" : "Flip package to show front or back")}" aria-pressed="false">
             <div class="package-flip-inner">
               <div class="package-face package-front"><img class="product-image" src="${escapeHtml(ASSET_PREFIX + product.image)}" alt="${escapeHtml(product.alt[state.lang] || product.alt.tr)}" loading="lazy" width="600" height="720"><span class="face-label">${escapeHtml(state.lang === "tr" ? "ÖN YÜZ" : "FRONT")}</span></div>
               <div class="package-face package-back"><img class="product-image" src="${escapeHtml(ASSET_PREFIX + product.backImage)}" alt="${escapeHtml(product.backAlt[state.lang] || product.backAlt.tr)}" loading="lazy" width="600" height="720"><span class="face-label">${escapeHtml(state.lang === "tr" ? "ARKA YÜZ" : "BACK")}</span></div>
             </div>
+            <span class="flip-hint" aria-hidden="true">${state.lang === "tr" ? "Ambalajı çevir ↻" : "Turn package ↻"}</span>
           </div>
           <span class="product-weight">${escapeHtml(product.weight.toUpperCase())}</span>
         </div>
@@ -319,11 +320,19 @@
     else dialog.setAttribute("open", "open");
   }
 
+  function togglePackage(flip) {
+    const flipped = flip.classList.toggle("is-flipped");
+    flip.setAttribute("aria-pressed", String(flipped));
+    const hint = flip.querySelector(".flip-hint");
+    if (hint) hint.textContent = state.lang === "tr"
+      ? (flipped ? "Ön yüze dön ↻" : "Ambalajı çevir ↻")
+      : (flipped ? "Back to front ↻" : "Turn package ↻");
+  }
+
   document.addEventListener("click", (event) => {
     const flip = event.target.closest(".package-flip");
     if (flip) {
-      flip.classList.toggle("is-flipped");
-      flip.setAttribute("aria-pressed", String(flip.classList.contains("is-flipped")));
+      togglePackage(flip);
     }
     const familyButton = event.target.closest("[data-family]");
     if (familyButton) {
@@ -341,7 +350,7 @@
 
   document.addEventListener("keydown", (event) => {
     const flip = event.target.closest && event.target.closest(".package-flip");
-    if (flip && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); flip.classList.toggle("is-flipped"); flip.setAttribute("aria-pressed", String(flip.classList.contains("is-flipped"))); }
+    if (flip && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); togglePackage(flip); }
   });
 
   searchInput.addEventListener("input", () => {
@@ -409,5 +418,10 @@
     revealTargets.forEach((element) => revealObserver.observe(element));
   }
 
+  // Size choices follow the catalogue automatically, including newly added packs.
+  const weights = [...new Set(PRODUCTS.map(product => product.weight))]
+    .sort((a, b) => parseFloat(a) - parseFloat(b));
+  weightFilter.innerHTML = '<option value="all" data-i18n="sizeAll"></option>' +
+    weights.map(weight => `<option value="${escapeHtml(weight)}">${escapeHtml(weight)}</option>`).join("");
   setLanguage(state.lang);
 })();

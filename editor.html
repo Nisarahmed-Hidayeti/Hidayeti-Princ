@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Product editor · Hidayeti Prinç</title>
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+  <header><a href="index.html">Hidayeti Prinç</a><a href="index.html#products">View website ↗</a></header>
+  <main>
+    <div class="intro"><div><p class="kicker">Catalogue workspace</p><h1>Your products, made simple.</h1><p>Edit here. Download the catalogue. Replace one file.</p></div><button id="download" type="button">Download products.js</button></div>
+    <details class="instructions"><summary>How to update the website · Nasıl güncellenir?</summary><p>1. Add or edit products and click “Save product”.<br>2. Download products.js and replace <strong>data/products.js</strong> in your website folder.<br>3. Put your images in <strong>assets/products/</strong>, then upload the changed files to your hosting.</p><p>Ürünleri düzenleyin ve kaydedin. İndirdiğiniz products.js dosyasını sitenizdeki data/products.js ile değiştirin. Fotoğrafları assets/products/ klasörüne ekleyin ve değişen dosyaları yayınlayın.</p><p>This editor works locally. Saving a product updates this session only; downloading does not publish changes. Keep the downloaded file before closing.</p></details>
+    <p id="status" role="status" aria-live="polite">Ready to edit. The live website stays unchanged until you replace its catalogue file.</p>
+    <div class="workspace">
+      <aside><div class="list-heading"><h2>Products <span id="count"></span></h2><button id="add" type="button" class="secondary">+ Add product</button></div><nav id="productList" aria-label="Select product"></nav></aside>
+      <section class="edit-panel" aria-labelledby="formTitle">
+        <div class="form-heading"><h2 id="formTitle">Edit product</h2><img id="preview" alt="Front package preview" hidden></div>
+        <form id="productForm">
+          <div class="fields">
+            <label>Product family / Marka<select name="family"><option value="hidayeti">Hidayeti Prinç</option><option value="buhari">Buharı Prinç</option></select></label>
+            <label>Pack size in kg / Paket ağırlığı<input name="weight" type="number" min="0.01" step="0.01" required placeholder="5"></label>
+            <label>Turkish name / Türkçe ad<input name="nameTr" required maxlength="150"></label>
+            <label>English name / İngilizce ad<input name="nameEn" required maxlength="150"></label>
+            <label>Turkish description<textarea name="descriptionTr" required rows="3"></textarea></label>
+            <label>English description<textarea name="descriptionEn" required rows="3"></textarea></label>
+            <label>Front image path / Ön fotoğraf<input name="image" required placeholder="assets/products/hidayeti-5kg-front.png"><small>Place the image in assets/products/ first.</small></label>
+            <label>Back image path / Arka fotoğraf<input name="backImage" required placeholder="assets/products/hidayeti-5kg-back.png"></label>
+          </div>
+          <p id="error" role="alert" hidden></p>
+          <div class="form-actions"><button type="submit">Save product</button><button id="remove" class="danger" type="button">Remove product</button></div>
+        </form>
+      </section>
+    </div>
+  </main>
+  <script src="data/products.js"></script><script src="editor.js"></script>
+</body>
+</html>

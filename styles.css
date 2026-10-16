@@ -1893,3 +1893,87 @@ html[data-theme="light"] img:not(.logo-image):not(.whatsapp-icon) { image-render
   .header-actions .language-switch { max-width: 78px; overflow: hidden; }
   .header-actions .language-switch #languageLabel { font-size: 9px; }
 }
+
+/* Catalogue refinement: give each package space and keep the full artwork visible. */
+.product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.product-image-wrap .package-face .product-image { object-fit: contain; padding: 14px; }
+.product-info { padding: 22px; }
+.product-info h3 { line-height: 1.35; }
+.product-card-actions { flex-wrap: wrap; gap: 12px; }
+.product-details, .product-wa { min-height: 44px; display: inline-flex; align-items: center; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, .package-flip:focus-visible {
+  outline: 3px solid var(--gold); outline-offset: 4px;
+}
+#productGrid[hidden] { display: none; }
+@media (max-width: 980px) { .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; } }
+@media (max-width: 560px) {
+  .product-grid { grid-template-columns: 1fr; gap: 24px; }
+  .product-image-wrap { aspect-ratio: 1 / 1; }
+  .product-info { padding: 20px; }
+  .product-card-actions { flex-direction: row; justify-content: space-between; }
+  .catalog-controls { width: 100%; }
+  .search-control { min-width: 0; flex: 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .product-card { animation: catalogue-enter .38s var(--ease) both; animation-delay: calc(var(--card-order, 0) * 45ms); }
+  .product-dialog[open] { animation: detail-enter .24s var(--ease); }
+  .product-dialog[open]::backdrop { animation: backdrop-enter .24s ease; }
+  @keyframes catalogue-enter { from { opacity: 0; translate: 0 12px; } to { opacity: 1; translate: 0 0; } }
+  @keyframes detail-enter { from { opacity: 0; translate: 0 12px; scale: .98; } to { opacity: 1; translate: 0 0; scale: 1; } }
+  @keyframes backdrop-enter { from { opacity: 0; } to { opacity: 1; } }
+}
+
+/* Art-directed motion: one entrance sequence, then feedback to the visitor. */
+.package-flip:hover .package-flip-inner,
+.package-flip:focus-visible .package-flip-inner { transform: none; }
+.package-flip.is-flipped .package-flip-inner { transform: rotateY(180deg); }
+@media (prefers-reduced-motion: no-preference) {
+  .motion-studio .hero-copy h1, .motion-studio .hero-visual,
+  .motion-studio .product-card { animation: none; }
+  .motion-studio .word-mask { display: inline-block; overflow: clip; vertical-align: bottom; padding-bottom: .12em; margin-bottom: -.12em; }
+  .motion-studio .word-mask > span { display: inline-block; transform-origin: left bottom; }
+  .motion-studio .hero-copy > .eyebrow { animation: hidayetiFadeUp .9s .1s both; }
+  .motion-studio .hero-description { animation: hidayetiFadeUp .9s .65s both; }
+  .motion-studio .hero-actions { animation: hidayetiFadeUp .9s .8s both; }
+  .motion-studio .hero-footnote { animation: hidayetiFadeUp .9s .95s both; }
+  .motion-studio .hero-bottom { animation: hidayetiFadeUp .9s 1.05s both; }
+  .motion-studio .hero-image {
+    transform: perspective(1100px) rotateX(calc(var(--pointer-y, 0) * -5deg)) rotateY(calc(var(--pointer-x, 0) * 7deg)) translate3d(calc(var(--pointer-x, 0) * 14px), calc(var(--pointer-y, 0) * 10px), 0);
+    transition: transform 650ms cubic-bezier(.16,1,.3,1);
+  }
+  .motion-studio .product-image-wrap { perspective: 1100px; }
+  .motion-studio .package-flip {
+    transform: rotateX(calc(var(--pointer-y, 0) * -7deg)) rotateY(calc(var(--pointer-x, 0) * 9deg));
+    transition: transform 550ms cubic-bezier(.16,1,.3,1);
+  }
+  .motion-studio .package-flip-inner { transition: transform 950ms cubic-bezier(.22,1,.36,1); }
+  .motion-studio .product-card { transition-delay: 0s; }
+  .motion-studio .product-card:hover { transform: translateY(-7px); }
+  .motion-studio .floating-whatsapp::before { animation: none; }
+  .motion-studio .hero-orb { animation: none; }
+  .motion-studio .product-dialog[open] { animation: studio-dialog 520ms cubic-bezier(.16,1,.3,1); }
+  .motion-studio .product-dialog[open] .dialog-copy { animation: hidayetiFadeUp 650ms 100ms both; }
+  @keyframes studio-dialog { from { opacity:0; transform:translateY(38px) scale(.94); } to { opacity:1; transform:translateY(0) scale(1); } }
+}
+
+/* The reverse side is a deliberate action, with a hint that stays still as it turns. */
+.flip-hint { position: absolute; right: 12px; bottom: 12px; z-index: 3; padding: 7px 11px; border-radius: 999px; background: var(--paper); color: var(--ink); border: 1px solid var(--line); font-size: 10px; font-weight: 600; pointer-events: none; }
+.reading-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 100; background: var(--gold); transform: scaleX(0); transform-origin: left; pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .motion-studio .floating-whatsapp { animation: none; }
+  .motion-studio.has-scroll-reveal .section-heading.reveal-on-scroll {
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(16px);
+    transition: clip-path 1s cubic-bezier(.16,1,.3,1), opacity .8s ease, transform 1s cubic-bezier(.16,1,.3,1);
+  }
+  .motion-studio.has-scroll-reveal .section-heading.reveal-on-scroll.is-visible { clip-path: inset(0); transform: none; }
+  .motion-studio.has-scroll-reveal .brand-visual.reveal-on-scroll { transform: translateX(-35px) rotate(-2deg); transition-duration: 1s; }
+  .motion-studio.has-scroll-reveal .brand-visual.reveal-on-scroll.is-visible { transform: none; }
+  .motion-studio .hero-actions .button { transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s ease, background .25s ease; }
+  .motion-studio .button:active { transform: translateY(1px) scale(.97); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress { display: none; }
+  .word-mask { overflow: visible !important; }
+  .word-mask > span { transform: none !important; }
+}
