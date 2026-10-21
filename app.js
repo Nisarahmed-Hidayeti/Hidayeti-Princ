@@ -6,7 +6,7 @@
   const ASSET_PREFIX = document.documentElement.dataset.assetPrefix || "";
   const translations = {
     tr: {
-      skip: "İçeriğe geç", brandLine: "BASMATİ PİRİNÇ", navProducts: "Ürünlerimiz", navAbout: "Hakkımızda", navFaq: "SSS", navContact: "İletişim",
+      emailLabel: "E-posta", secondaryEmailLabel: "Alternatif e-posta", skip: "İçeriğe geç", brandLine: "BASMATİ PİRİNÇ", navProducts: "Ürünlerimiz", navAbout: "Hakkımızda", navFaq: "SSS", navContact: "İletişim",
       headerWhatsapp: "<svg class='whatsapp-icon' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M20.52 3.48A11.75 11.75 0 0 0 2.03 17.62L.5 23.5l6.02-1.58a11.75 11.75 0 0 0 14-18.44ZM12 21.1a9.1 9.1 0 0 1-4.64-1.27l-.34-.2-3.57.94.95-3.48-.22-.36A9.1 9.1 0 1 1 12 21.1Zm5-6.82c-.27-.14-1.62-.8-1.87-.89-.25-.1-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.28s.98 2.64 1.12 2.82c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.65.21 1.24.18 1.71.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32Z' fill='currentColor'/></svg> WhatsApp", floatingWhatsapp: "WhatsApp'tan yazın", mobileWhatsapp: "<svg class='whatsapp-icon' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M20.52 3.48A11.75 11.75 0 0 0 2.03 17.62L.5 23.5l6.02-1.58a11.75 11.75 0 0 0 14-18.44ZM12 21.1a9.1 9.1 0 0 1-4.64-1.27l-.34-.2-3.57.94.95-3.48-.22-.36A9.1 9.1 0 1 1 12 21.1Zm5-6.82c-.27-.14-1.62-.8-1.87-.89-.25-.1-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.28s.98 2.64 1.12 2.82c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.65.21 1.24.18 1.71.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32Z' fill='currentColor'/></svg> WhatsApp üzerinden ulaşın",
       heroEyebrow: "HİDAYETİ PRİNÇ · BASMATİ", heroTitle: "Basmati pirinç ürünlerini <em>keşfedin.</em>",
       heroDescription: "Hidayeti Prinç ve Buharı Prinç ürün seçeneklerini inceleyin. Ürün detayları ve fiyat bilgisi için bize doğrudan ulaşın.",
@@ -59,7 +59,7 @@
       themeToDark: "Koyu temaya geç", themeToLight: "Açık temaya geç", pageTitle: "Hidayeti Prinç | Basmati Pirinç Ürünleri", pageDescription: "Hidayeti Prinç Basmati pirinç ürünlerini keşfedin. 5 kg, 10 kg ve 40 kg ürün seçenekleri hakkında bilgi ve fiyat için WhatsApp'tan bize ulaşın."
     },
     en: {
-      skip: "Skip to content", brandLine: "BASMATI RICE", navProducts: "Our products", navAbout: "About us", navFaq: "FAQ", navContact: "Contact",
+      emailLabel: "Email", secondaryEmailLabel: "Alternative email", skip: "Skip to content", brandLine: "BASMATI RICE", navProducts: "Our products", navAbout: "About us", navFaq: "FAQ", navContact: "Contact",
       headerWhatsapp: "<svg class='whatsapp-icon' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M20.52 3.48A11.75 11.75 0 0 0 2.03 17.62L.5 23.5l6.02-1.58a11.75 11.75 0 0 0 14-18.44ZM12 21.1a9.1 9.1 0 0 1-4.64-1.27l-.34-.2-3.57.94.95-3.48-.22-.36A9.1 9.1 0 1 1 12 21.1Zm5-6.82c-.27-.14-1.62-.8-1.87-.89-.25-.1-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.28s.98 2.64 1.12 2.82c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.65.21 1.24.18 1.71.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32Z' fill='currentColor'/></svg> WhatsApp", floatingWhatsapp: "Message us on WhatsApp", mobileWhatsapp: "<svg class='whatsapp-icon' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M20.52 3.48A11.75 11.75 0 0 0 2.03 17.62L.5 23.5l6.02-1.58a11.75 11.75 0 0 0 14-18.44ZM12 21.1a9.1 9.1 0 0 1-4.64-1.27l-.34-.2-3.57.94.95-3.48-.22-.36A9.1 9.1 0 1 1 12 21.1Zm5-6.82c-.27-.14-1.62-.8-1.87-.89-.25-.1-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.28s.98 2.64 1.12 2.82c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.65.21 1.24.18 1.71.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32Z' fill='currentColor'/></svg> Contact us on WhatsApp",
       heroEyebrow: "HIDAYETI PRINÇ · BASMATI", heroTitle: "Discover our <em>Basmati rice.</em>",
       heroDescription: "Explore Hidayeti Prinç and Buharı Prinç product options. Contact us directly for product details and a quote.",
@@ -382,15 +382,47 @@
 
   const mobileToggle = document.getElementById("mobileMenuToggle");
   const mobileNav = document.getElementById("mobileNav");
+  const menuMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let menuAnimation = null;
+  function setMobileMenu(open, animate = true) {
+    const currentStyle = getComputedStyle(mobileNav);
+    const from = {
+      height: `${mobileNav.getBoundingClientRect().height}px`, opacity: mobileNav.hidden ? 0 : currentStyle.opacity,
+      paddingTop: mobileNav.hidden ? "0px" : currentStyle.paddingTop,
+      paddingBottom: mobileNav.hidden ? "0px" : currentStyle.paddingBottom
+    };
+    if (menuAnimation) { menuAnimation.cancel(); menuAnimation = null; }
+    mobileToggle.setAttribute("aria-expanded", String(open));
+    mobileToggle.setAttribute("aria-label", state.lang === "tr"
+      ? (open ? "Menüyü kapat" : "Menüyü aç") : (open ? "Close menu" : "Open menu"));
+    mobileNav.inert = !open;
+    if (!animate || menuMotion.matches || !mobileNav.animate) { mobileNav.hidden = !open; return; }
+    mobileNav.hidden = false;
+    const fullStyle = getComputedStyle(mobileNav);
+    const to = open ? {
+      height: `${mobileNav.getBoundingClientRect().height}px`, opacity: 1,
+      paddingTop: fullStyle.paddingTop, paddingBottom: fullStyle.paddingBottom
+    } : { height: "0px", opacity: 0, paddingTop: "0px", paddingBottom: "0px" };
+    menuAnimation = mobileNav.animate([from, to], {
+      duration: open ? 320 : 220, easing: "cubic-bezier(.22,1,.36,1)"
+    });
+    menuAnimation.onfinish = () => { mobileNav.hidden = !open; menuAnimation = null; };
+  }
   mobileToggle.addEventListener("click", () => {
-    const expanded = mobileToggle.getAttribute("aria-expanded") === "true";
-    mobileToggle.setAttribute("aria-expanded", String(!expanded));
-    mobileNav.hidden = expanded;
+    setMobileMenu(mobileToggle.getAttribute("aria-expanded") !== "true");
   });
-  mobileNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
-    mobileToggle.setAttribute("aria-expanded", "false");
-    mobileNav.hidden = true;
-  }));
+  mobileNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMobileMenu(false, false)));
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && mobileToggle.getAttribute("aria-expanded") === "true") {
+      setMobileMenu(false); mobileToggle.focus();
+    }
+  });
+  menuMotion.addEventListener("change", () => {
+    if (menuMotion.matches) setMobileMenu(mobileToggle.getAttribute("aria-expanded") === "true", false);
+  });
+  window.matchMedia("(max-width: 760px)").addEventListener("change", event => {
+    if (!event.matches) setMobileMenu(false, false);
+  });
 
   document.getElementById("dialogClose").addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", (event) => {

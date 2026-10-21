@@ -1,5 +1,5 @@
 /* Product catalogue. Product facts are limited to the confirmed brand, Basmati type and pack sizes. */
-window.SITE_CONFIG = { whatsappNumber: "905344641463", email: "", address: "", domain: "" };
+window.SITE_CONFIG = { whatsappNumber: "905344641463", email: "hidayetiprinc@hotmail.com", secondaryEmail: "faryab94@gmail.com", address: "", domain: "" };
 window.PRODUCTS = [
   {
     id: "hidayeti-basmati-5kg", slug: "hidayeti-basmati-5-kg", family: "hidayeti", category: "basmati", weight: "5 kg",

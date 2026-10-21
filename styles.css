@@ -645,9 +645,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .product-card:nth-child(3) { animation-delay: .1s; }
 .product-card:nth-child(4) { animation-delay: .15s; }
 html.has-scroll-reveal .reveal-on-scroll {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity .65s var(--ease), transform .65s var(--ease);
+  opacity: 1;
+  transform: none;
 }
 html.has-scroll-reveal .reveal-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
 
@@ -1698,7 +1697,8 @@ html[data-theme="dark"] .product-weight { background:#263b2c; color:#dce8cc; bor
   .hero-visual { animation: hidayetiImageSettle .95s .24s both; }
   .hero-image { animation: none; }
   .hero-bottom { animation: hidayetiFadeUp .7s .58s both; }
-  html.has-scroll-reveal .reveal-on-scroll { transform: translateY(24px); transition: opacity .72s cubic-bezier(.2,.7,.2,1), transform .72s cubic-bezier(.2,.7,.2,1); }
+  html.has-scroll-reveal .reveal-on-scroll.is-visible { animation: section-arrive .65s cubic-bezier(.2,.7,.2,1); }
+  @keyframes section-arrive { from { transform: translateY(16px); } to { transform: none; } }
   .product-card { animation: none; }
   .product-card:nth-child(1) { transition-delay: .02s; }
   .product-card:nth-child(2) { transition-delay: .08s; }
@@ -1962,12 +1962,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 @media (prefers-reduced-motion: no-preference) {
   .motion-studio .floating-whatsapp { animation: none; }
   .motion-studio.has-scroll-reveal .section-heading.reveal-on-scroll {
-    clip-path: inset(0 0 100% 0);
-    transform: translateY(16px);
-    transition: clip-path 1s cubic-bezier(.16,1,.3,1), opacity .8s ease, transform 1s cubic-bezier(.16,1,.3,1);
+    /* Keep the target's full area observable until it enters the viewport. */
+    clip-path: none;
+    transform: none;
   }
-  .motion-studio.has-scroll-reveal .section-heading.reveal-on-scroll.is-visible { clip-path: inset(0); transform: none; }
-  .motion-studio.has-scroll-reveal .brand-visual.reveal-on-scroll { transform: translateX(-35px) rotate(-2deg); transition-duration: 1s; }
+  .motion-studio.has-scroll-reveal .section-heading.reveal-on-scroll.is-visible { transform: none; animation: section-arrive .65s cubic-bezier(.16,1,.3,1); }
+  .motion-studio.has-scroll-reveal .brand-visual.reveal-on-scroll { transform: none; }
   .motion-studio.has-scroll-reveal .brand-visual.reveal-on-scroll.is-visible { transform: none; }
   .motion-studio .hero-actions .button { transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s ease, background .25s ease; }
   .motion-studio .button:active { transform: translateY(1px) scale(.97); }
@@ -2067,3 +2067,50 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .product-info { padding: 12px; }
   .product-info h3 { font-size: 16px; }
 }
+
+/* Secondary contact details stay available without competing with WhatsApp. */
+.contact-email, .footer-email { display: inline-flex; align-items: center; min-height: 40px; font-size: 12px; color: var(--muted); text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); text-underline-offset: 4px; overflow-wrap: anywhere; }
+.contact-email { margin-top: 12px; }
+.footer-email { margin-left: auto; }
+.contact-email:hover, .footer-email:hover { color: var(--ink); text-decoration-color: currentColor; }
+html[data-theme="dark"] .contact-email, html[data-theme="dark"] .footer-email { color: #c6d2c1; }
+@media (max-width: 760px) {
+  .mobile-nav { overflow: hidden; }
+  .mobile-menu-toggle { gap: 6px; }
+  .mobile-menu-toggle span { width: 18px; height: 2px; border-radius: 2px; transform-origin: center; }
+  .mobile-menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(4px) rotate(45deg); }
+  .mobile-menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-4px) rotate(-45deg); }
+  .footer-email { grid-column: 1 / -1; grid-row: 2; margin-left: 0; min-width: 0; }
+  .footer-bottom .back-top { grid-column: 2; grid-row: 1; }
+  .contact-email { margin-top: 8px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .mobile-menu-toggle span { transition: transform 320ms cubic-bezier(.22,1,.36,1), width 240ms ease; }
+  .mobile-menu-toggle { transition: background 240ms ease, border-color 240ms ease; }
+  .mobile-menu-toggle[aria-expanded="true"] { background: var(--paper-deep); border-color: var(--gold); }
+}
+@media (prefers-reduced-motion: reduce) { .mobile-menu-toggle span { transition: none; } }
+
+/* The business address leads; the alternative remains easy to find below it. */
+.contact-emails { display: grid; justify-items: start; margin-top: 12px; }
+.contact-emails .contact-email { margin-top: 0; font-weight: 600; }
+.contact-emails .contact-email-secondary { flex-wrap: wrap; gap: 4px 10px; font-weight: 400; }
+.contact-email-secondary > span:first-child { font-size: 11px; text-decoration: none; }
+@media (max-width: 760px) { .contact-emails { margin-top: 8px; } }
+
+/* Match section spacing to the content rather than the desktop viewport height. */
+@media (min-width: 761px) {
+  .hero-section { min-height: 0; }
+  .hero-grid { flex: none; padding-top: 36px; padding-bottom: 28px; }
+  .hero-visual { min-height: 340px; }
+  .hero-image { max-height: 440px; }
+  .hero-bottom { margin-top: 0; padding-top: 18px; padding-bottom: 18px; }
+  .section-pad { padding-block: 64px 48px; }
+  .section-heading { gap: 24px; margin-bottom: 28px; }
+  .brand-facts { margin-top: 32px; }
+  .contact-section { padding-top: 24px; }
+}
+.contact-emails-label { margin: 0 0 4px; font-size: 12px; font-weight: 600; color: var(--ink); }
+html[data-theme="dark"] .contact-emails-label { color: #edf3e7; }
+.contact-emails .contact-email { font-size: 13px; }
+.contact-emails .contact-email-secondary { font-size: 12px; }
