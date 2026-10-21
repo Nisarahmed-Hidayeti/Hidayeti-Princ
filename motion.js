@@ -28,7 +28,7 @@
         const inner = document.createElement('span');
         inner.textContent = word;
         mask.append(inner); fragment.append(mask);
-        animate(inner, [{transform:'translateY(115%) rotate(5deg)',opacity:0},{transform:'translateY(0) rotate(0)',opacity:1}],
+        animate(inner, [{transform:'translateY(115%)',opacity:0},{transform:'translateY(0)',opacity:1}],
           {duration:1250,delay:160 + order++ * 135,easing,fill:'backwards'});
       });
       node.replaceWith(fragment);
@@ -36,23 +36,38 @@
   }
   const visual = document.querySelector('.hero-visual');
   if (visual) animate(visual,
-    [{clipPath:'inset(0 100% 0 0 round 24px)',opacity:.5,transform:'translateX(45px) scale(1.08)'},
-     {clipPath:'inset(0 0% 0 0 round 24px)',opacity:1,transform:'translateX(0) scale(1)'}],
+    [{clipPath:'inset(8% 45% 8% 45% round 24px)',opacity:.55,transform:'scale(1.08)'},
+     {clipPath:'inset(0 0 0 0 round 24px)',opacity:1,transform:'scale(1)'}],
     {duration:1450,delay:260,easing,fill:'backwards'});
 
+  // Mirror the outer cards around the center of each actual row, at every breakpoint.
+  function rowEntrance(element) {
+    const parent = element.parentElement;
+    const style = getComputedStyle(parent);
+    const columns = style.display === 'grid' ? style.gridTemplateColumns.split(' ').length : 1;
+    const siblings = [...parent.children];
+    const index = siblings.indexOf(element);
+    const rowStart = Math.floor(index / columns) * columns;
+    const count = Math.min(columns, siblings.length - rowStart);
+    const center = (count - 1) / 2;
+    const axis = center ? (index - rowStart - center) / center : 0;
+    return { x: Math.round(axis * 34), delay: Math.round(Math.abs(axis) * 100) };
+  }
+  const onScreen = new WeakSet();
+  const lastEntrance = new WeakMap();
   const observer = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      observer.unobserve(entry.target);
-      if (preference.matches) return;
-      const index = Number(entry.target.style.getPropertyValue('--card-order')) || 0;
-      const isProduct = entry.target.classList.contains('product-card');
+      if (!entry.isIntersecting) { onScreen.delete(entry.target); return; }
+      if (preference.matches || onScreen.has(entry.target)) return;
+      onScreen.add(entry.target);
+      const now = performance.now();
+      if (now - (lastEntrance.get(entry.target) ?? -Infinity) < 1600) return;
+      lastEntrance.set(entry.target, now);
+      const position = rowEntrance(entry.target);
       animate(entry.target,
-        [{opacity:.45,transform:isProduct
-          ? `perspective(1000px) translate3d(${index % 2 ? 32 : -32}px, 42px, 0) rotateX(9deg) scale(.94)`
-          : 'translateY(38px) scale(.96)'},
+        [{opacity:.55,transform:`perspective(1000px) translate3d(${position.x}px, 38px, 0) rotateX(6deg) scale(.95)`},
          {opacity:1,transform:'perspective(1000px) translate3d(0,0,0) rotateX(0) scale(1)'}],
-        {duration:1050,delay:(index % 3) * 130,easing,fill:'backwards',id:'surface-arrive'});
+        {duration:950,delay:position.delay,easing,fill:'backwards',id:'surface-arrive'});
     });
   }, {threshold:.08}) : null;
   if (observer) document.querySelectorAll('.audience-card, .brand-visual-card, .brand-fact, .contact-panel').forEach((element, index) => {
