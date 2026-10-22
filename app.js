@@ -387,7 +387,7 @@
   function setMobileMenu(open, animate = true) {
     const currentStyle = getComputedStyle(mobileNav);
     const from = {
-      height: `${mobileNav.getBoundingClientRect().height}px`, opacity: mobileNav.hidden ? 0 : currentStyle.opacity,
+      height: `${mobileNav.getBoundingClientRect().height}px`,
       paddingTop: mobileNav.hidden ? "0px" : currentStyle.paddingTop,
       paddingBottom: mobileNav.hidden ? "0px" : currentStyle.paddingBottom
     };
@@ -400,9 +400,9 @@
     mobileNav.hidden = false;
     const fullStyle = getComputedStyle(mobileNav);
     const to = open ? {
-      height: `${mobileNav.getBoundingClientRect().height}px`, opacity: 1,
+      height: `${mobileNav.getBoundingClientRect().height}px`,
       paddingTop: fullStyle.paddingTop, paddingBottom: fullStyle.paddingBottom
-    } : { height: "0px", opacity: 0, paddingTop: "0px", paddingBottom: "0px" };
+    } : { height: "0px", paddingTop: "0px", paddingBottom: "0px" };
     menuAnimation = mobileNav.animate([from, to], {
       duration: open ? 320 : 220, easing: "cubic-bezier(.22,1,.36,1)"
     });
@@ -429,26 +429,6 @@
     if (event.target === dialog) dialog.close();
   });
   document.getElementById("currentYear").textContent = new Date().getFullYear();
-
-  // Lightweight section reveal on scroll. The site remains visible if reduced
-  // motion is enabled or if IntersectionObserver is unavailable.
-  const motionPreference = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: no-preference)").matches : true;
-  if (motionPreference && "IntersectionObserver" in window) {
-    const revealTargets = document.querySelectorAll(
-      ".hero-bottom, .products-heading, .catalog-tools, .catalog-status, .catalog-bottom-note, .range-heading, .range-layout, .audience-heading, .audience-card, .how-intro, .how-step, .brand-visual, .brand-copy-main, .brand-fact, .faq-heading, .faq-item, .contact-panel, .site-footer"
-    );
-    document.documentElement.classList.add("has-scroll-reveal");
-    revealTargets.forEach((element) => element.classList.add("reveal-on-scroll"));
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
-    revealTargets.forEach((element) => revealObserver.observe(element));
-  }
 
   // Size choices follow the catalogue automatically, including newly added packs.
   const weights = [...new Set(PRODUCTS.map(product => product.weight))]

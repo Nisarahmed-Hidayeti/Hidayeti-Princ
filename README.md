@@ -51,8 +51,8 @@ WhatsApp inquiries are configured for `+90 534 464 1463`. Update `window.SITE_CO
 
 
 ## Visual update (October 2026)
-- Reworked the hero to use the full available desktop viewport below the sticky header, with more balanced product imagery and spacing.
-- Added a staggered, restrained entrance sequence for the hero and smoother scroll reveals for lower sections; reduced-motion preferences remain respected.
+- Reworked the hero with balanced product imagery and content-sized spacing below the sticky header.
+- Added short, movement-only settling for the hero and lower sections; content remains visible throughout and reduced-motion preferences are respected.
 - Replaced the placeholder circle on the hero WhatsApp action with a recognizable WhatsApp mark and applied a clearer WhatsApp-green treatment to the main contact actions.
 - Fixed the brand-card tagline contrast in light mode.
 - Added a proper light-theme contact panel while retaining the deep-green contact panel in dark mode.
@@ -64,12 +64,4 @@ WhatsApp inquiries are configured for `+90 534 464 1463`. Update `window.SITE_CO
 - Keep the full folder intact when extracting; the site depends on the existing assets and relative paths.
 
 ## Motion
-`motion.js` enhances the existing design with a masked word entrance, framed hero reveal, viewport-triggered package entrances, and pointer-responsive package depth. Click, tap, Enter or Space turns a package; hovering leaves the front available to inspect. Motion is disabled for reduced-motion preferences, including changes made while the page is open. No animation libraries are required.
-
-## Motion refinement
-- Masked word-by-word hero title and a sweeping image reveal on arrival.
-- Pointer-responsive depth for the hero and packages on desktop; no pointer effects on touch screens.
-- Staggered catalogue entrances as cards reach the viewport, section-heading wipes, and a quiet reading-progress line.
-- Deliberate click/tap/keyboard package flips with a bilingual hint.
-- Reduced-motion preferences skip the enhancements, including when changed while the page is open.
-- `motion.js` is shared by both language pages and must be included when publishing.
+`motion.js` keeps text and images visible from the first frame. The hero settles by a few pixels with no stagger, fade, masking or delay. Sections and product cards move once when they first enter view and do not replay when scrolling back. Desktop pointer depth and press/hover feedback stay small; touch scrolling remains native. Package flips and the mobile menu respond to deliberate actions. Reduced-motion preferences are respected at load and when changed while the page is open. No animation libraries are required.
