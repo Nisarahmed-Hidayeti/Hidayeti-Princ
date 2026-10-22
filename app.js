@@ -222,7 +222,7 @@
         <div class="product-image-wrap">
           <div class="package-flip" tabindex="0" role="button" aria-label="${escapeHtml(state.lang === "tr" ? "Ambalajın ön ve arka yüzünü değiştir" : "Flip package to show front or back")}" aria-pressed="false">
             <div class="package-flip-inner">
-              <div class="package-face package-front"><img class="product-image" src="${escapeHtml(ASSET_PREFIX + product.image)}" alt="${escapeHtml(product.alt[state.lang] || product.alt.tr)}" loading="lazy" width="600" height="720"><span class="face-label">${escapeHtml(state.lang === "tr" ? "ÖN YÜZ" : "FRONT")}</span></div>
+              <div class="package-face package-front"><img class="product-image" src="${escapeHtml(ASSET_PREFIX + product.image)}" alt="${escapeHtml(product.alt[state.lang] || product.alt.tr)}" loading="eager" width="600" height="720"><span class="face-label">${escapeHtml(state.lang === "tr" ? "ÖN YÜZ" : "FRONT")}</span></div>
               <div class="package-face package-back"><img class="product-image" src="${escapeHtml(ASSET_PREFIX + product.backImage)}" alt="${escapeHtml(product.backAlt[state.lang] || product.backAlt.tr)}" loading="lazy" width="600" height="720"><span class="face-label">${escapeHtml(state.lang === "tr" ? "ARKA YÜZ" : "BACK")}</span></div>
             </div>
             <span class="flip-hint" aria-hidden="true">${state.lang === "tr" ? "Ambalajı çevir ↻" : "Turn package ↻"}</span>

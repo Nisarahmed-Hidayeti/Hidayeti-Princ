@@ -65,3 +65,5 @@ WhatsApp inquiries are configured for `+90 534 464 1463`. Update `window.SITE_CO
 
 ## Motion
 `motion.js` keeps text and images visible from the first frame. The hero settles by a few pixels with no stagger, fade, masking or delay. Sections and product cards move once when they first enter view and do not replay when scrolling back. Desktop pointer depth and press/hover feedback stay small; touch scrolling remains native. Package flips and the mobile menu respond to deliberate actions. Reduced-motion preferences are respected at load and when changed while the page is open. No animation libraries are required.
+
+Product-front photos start loading immediately so the five-pack catalogue does not wait for scrolling to request its pictures. The hero image has high fetch priority; reverse-side images remain lazy-loaded. Images still require normal download time on a fresh visit.
