@@ -2034,3 +2034,55 @@ html[data-theme="dark"] .contact-emails-label { color: #edf3e7; }
 @media (min-width: 761px) {
   .product-weight { top: 12px; right: 12px; bottom: auto; left: auto; }
 }
+
+/* Start with the page background, then introduce the storefront in sequence. */
+@media (prefers-reduced-motion: no-preference) {
+  body:has(.hero-section) {
+    animation: storefront-first-frame 1ms linear 120ms backwards;
+  }
+
+  .site-header, .hero-copy > *, .hero-bottom, .floating-whatsapp {
+    animation: storefront-enter 760ms cubic-bezier(.22,.72,.3,1) var(--entry-delay, 120ms) backwards;
+  }
+
+  .hero-copy > :nth-child(1) { --entry-delay: 170ms; }
+  .hero-copy > :nth-child(2) { --entry-delay: 240ms; }
+  .hero-copy > :nth-child(3) { --entry-delay: 340ms; }
+  .hero-copy > :nth-child(4) { --entry-delay: 440ms; }
+  .hero-copy > :nth-child(5) { --entry-delay: 520ms; }
+  .hero-bottom, .floating-whatsapp { --entry-delay: 590ms; }
+
+  .hero-visual .hero-image {
+    animation: storefront-photo-enter 950ms cubic-bezier(.22,.72,.3,1) 290ms backwards;
+  }
+
+  body:has(.hero-section):has(:focus-visible),
+  .site-header:focus-within, .hero-copy > :focus-within,
+  .hero-bottom:focus-within, .floating-whatsapp:focus-visible {
+    animation: none;
+  }
+
+  @keyframes storefront-first-frame {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes storefront-enter {
+    from { opacity: 0; translate: 0 28px; }
+    to { opacity: 1; translate: 0 0; }
+  }
+
+  @keyframes storefront-photo-enter {
+    from { opacity: 0; translate: 0 32px; clip-path: inset(-60px -60px 35% -60px); }
+    to { opacity: 1; translate: 0 0; clip-path: inset(-60px); }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-entrances :is(
+    .products-heading, .catalog-tools, .audience-heading, .audience-card,
+    .brand-visual-card, .brand-copy-main, .brand-fact, .contact-panel, .product-card
+  ):not(.has-entered):not(:focus-within) {
+    opacity: 0;
+  }
+}

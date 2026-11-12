@@ -19,6 +19,13 @@
       root.setAttribute("data-theme-mode", preference);
       root.setAttribute("data-theme", theme);
       root.style.colorScheme = theme;
+      if ("IntersectionObserver" in window && Element.prototype.animate &&
+          window.matchMedia && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        root.classList.add("scroll-entrances");
+        window.setTimeout(function () {
+          if (!root.classList.contains("motion-studio")) root.classList.remove("scroll-entrances");
+        }, 2000);
+      }
     }());
   </script>
   <meta name="description" content="Hidayeti Prinç Basmati pirinç ürünlerini keşfedin. 5 kg, 10 kg ve 40 kg ürün seçenekleri hakkında bilgi ve fiyat için WhatsApp'tan bize ulaşın.">

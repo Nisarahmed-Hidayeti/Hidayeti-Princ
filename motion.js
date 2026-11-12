@@ -1,4 +1,4 @@
-/* Content-first motion: short movements, no hidden text or replay on scroll. */
+/* Fade and lift elements into place as they first appear. */
 (function () {
   "use strict";
   if (!Element.prototype.animate) return;
@@ -8,20 +8,20 @@
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   const running = new Set();
   const settled = new WeakSet();
-  const easing = 'cubic-bezier(.22,.61,.36,1)';
+  const easing = 'cubic-bezier(.24,.66,.32,1)';
   const surfaces = '.products-heading, .catalog-tools, .audience-heading, .audience-card, .brand-visual-card, .brand-copy-main, .brand-fact, .contact-panel, .product-card';
 
-  function settle(element, distance = 8, duration = 420) {
-    if (!element || preference.matches) return;
+  function settle(element) {
+    if (preference.matches || element.contains(document.activeElement)) return;
     const animation = element.animate(
-      [{translate: `0 ${distance}px`}, {translate: '0 0'}],
-      {duration, easing, id: 'surface-settle'}
+      [{opacity: 0, translate: '0 56px'}, {opacity: 1, translate: '0 0'}],
+      {duration: 870, easing, id: 'surface-settle'}
     );
     running.add(animation);
     animation.finished.then(() => running.delete(animation), () => running.delete(animation));
   }
 
-  // Observe full, readable surfaces; moving them never changes document spacing.
+  // Reveal each surface once when it enters the viewport.
   const observer = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting || preference.matches) return;
@@ -29,8 +29,9 @@
       if (settled.has(entry.target)) return;
       settled.add(entry.target);
       settle(entry.target);
+      entry.target.classList.add('has-entered');
     });
-  }, {threshold: .05}) : null;
+  }, {threshold: .08}) : null;
   function observeSurfaces() {
     if (!observer || preference.matches) return;
     document.querySelectorAll(surfaces).forEach(element => {
@@ -38,10 +39,8 @@
     });
   }
 
-  // One quiet arrival for the hero, without splitting or clipping its headline.
   root.classList.toggle('motion-studio', !preference.matches);
-  settle(document.querySelector('.hero-copy'), 6, 480);
-  settle(document.querySelector('.hero-visual'), 8, 560);
+  root.classList.toggle('scroll-entrances', Boolean(observer) && !preference.matches);
   observeSurfaces();
 
   const progress = document.createElement('div');
@@ -105,6 +104,7 @@
   finePointer.addEventListener('change', resetTarget);
   preference.addEventListener('change', () => {
     root.classList.toggle('motion-studio', !preference.matches);
+    root.classList.toggle('scroll-entrances', Boolean(observer) && !preference.matches);
     progress.hidden = preference.matches;
     if (preference.matches) {
       running.forEach(animation => animation.cancel());
