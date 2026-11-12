@@ -208,7 +208,12 @@
     });
   }
 
+  function imagePath(source, size) {
+    return ASSET_PREFIX + (window.SEO_IMAGES?.[source]?.[size] || source);
+  }
+
   function renderProducts() {
+    if (!Array.isArray(window.PRODUCTS)) return;
     const query = state.query.trim().toLocaleLowerCase(state.lang === "tr" ? "tr-TR" : "en-US");
     const filtered = PRODUCTS.filter((product) => {
       const matchesFamily = state.family === "all" || product.family === state.family;
@@ -222,8 +227,8 @@
         <div class="product-image-wrap">
           <div class="package-flip" tabindex="0" role="button" aria-label="${escapeHtml(state.lang === "tr" ? "Ambalajın ön ve arka yüzünü değiştir" : "Flip package to show front or back")}" aria-pressed="false">
             <div class="package-flip-inner">
-              <div class="package-face package-front"><img class="product-image" src="${escapeHtml(ASSET_PREFIX + product.image)}" alt="${escapeHtml(product.alt[state.lang] || product.alt.tr)}" loading="eager" width="600" height="720"><span class="face-label">${escapeHtml(state.lang === "tr" ? "ÖN YÜZ" : "FRONT")}</span></div>
-              <div class="package-face package-back"><img class="product-image" src="${escapeHtml(ASSET_PREFIX + product.backImage)}" alt="${escapeHtml(product.backAlt[state.lang] || product.backAlt.tr)}" loading="lazy" width="600" height="720"><span class="face-label">${escapeHtml(state.lang === "tr" ? "ARKA YÜZ" : "BACK")}</span></div>
+              <div class="package-face package-front"><img class="product-image" src="${escapeHtml(imagePath(product.image, "card"))}" alt="${escapeHtml(product.alt[state.lang] || product.alt.tr)}" loading="lazy" decoding="async" width="600" height="720"><span class="face-label">${escapeHtml(state.lang === "tr" ? "ÖN YÜZ" : "FRONT")}</span></div>
+              <div class="package-face package-back"><img class="product-image" src="${escapeHtml(imagePath(product.backImage, "card"))}" alt="${escapeHtml(product.backAlt[state.lang] || product.backAlt.tr)}" loading="lazy" width="600" height="720"><span class="face-label">${escapeHtml(state.lang === "tr" ? "ARKA YÜZ" : "BACK")}</span></div>
             </div>
             <span class="flip-hint" aria-hidden="true">${state.lang === "tr" ? "Ambalajı çevir ↻" : "Turn package ↻"}</span>
           </div>
@@ -231,7 +236,7 @@
         </div>
         <div class="product-info">
           <span class="product-family">${escapeHtml(familyLabel(product))}</span>
-          <h3>${escapeHtml(product.name[state.lang] || product.name.tr)}</h3>
+          <h3><a class="seo-product-link" href="/urunler/${escapeHtml(product.slug)}/"${state.lang === "en" ? ' hreflang="tr"' : ""}>${escapeHtml(product.name[state.lang] || product.name.tr)}</a></h3>
           <p class="product-description">${escapeHtml(product.description[state.lang] || product.description.tr)}</p>
           <div class="product-card-actions">
             <button class="product-details" type="button" data-details="${escapeHtml(product.id)}">${escapeHtml(t("productDetails"))} <span aria-hidden="true">↗</span></button>
@@ -253,14 +258,7 @@
 
   function setLanguage(language) {
     state.lang = language === "en" ? "en" : "tr";
-    document.documentElement.lang = state.lang;
-    document.title = t("pageTitle");
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.content = t("pageDescription");
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogTitle) ogTitle.content = t("pageTitle");
-    if (ogDesc) ogDesc.content = t("pageDescription");
+    document.documentElement.lang = state.lang === "tr" ? "tr-TR" : "en";
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const key = element.getAttribute("data-i18n");
@@ -306,7 +304,7 @@
     const name = product.name[state.lang] || product.name.tr;
     const description = product.description[state.lang] || product.description.tr;
     dialogContent.innerHTML = `
-      <div class="dialog-image-wrap dialog-package-views"><figure><img src="${escapeHtml(ASSET_PREFIX + product.image)}" alt="${escapeHtml(product.alt[state.lang] || product.alt.tr)}" width="600" height="720"><figcaption>${escapeHtml(state.lang === "tr" ? "Ön yüz" : "Front")}</figcaption></figure><figure><img src="${escapeHtml(ASSET_PREFIX + product.backImage)}" alt="${escapeHtml(product.backAlt[state.lang] || product.backAlt.tr)}" width="600" height="720"><figcaption>${escapeHtml(state.lang === "tr" ? "Arka yüz" : "Back")}</figcaption></figure></div>
+      <div class="dialog-image-wrap dialog-package-views"><figure><img src="${escapeHtml(imagePath(product.image, "full"))}" alt="${escapeHtml(product.alt[state.lang] || product.alt.tr)}" width="600" height="720"><figcaption>${escapeHtml(state.lang === "tr" ? "Ön yüz" : "Front")}</figcaption></figure><figure><img src="${escapeHtml(imagePath(product.backImage, "full"))}" alt="${escapeHtml(product.backAlt[state.lang] || product.backAlt.tr)}" width="600" height="720"><figcaption>${escapeHtml(state.lang === "tr" ? "Arka yüz" : "Back")}</figcaption></figure></div>
       <div class="dialog-copy">
         <span class="product-family">${escapeHtml(familyLabel(product))} · ${escapeHtml(t("basmatiRice"))}</span>
         <h2 id="dialogTitle">${escapeHtml(name)}</h2>
@@ -375,10 +373,6 @@
     renderProducts();
   });
 
-  languageToggle.addEventListener("click", () => {
-    // Use separate crawlable language URLs while preserving the one-page experience.
-    window.location.href = state.lang === "tr" ? "en/index.html" : "../index.html";
-  });
 
   const mobileToggle = document.getElementById("mobileMenuToggle");
   const mobileNav = document.getElementById("mobileNav");
