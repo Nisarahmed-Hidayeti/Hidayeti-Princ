@@ -1,0 +1,7 @@
+# Google search appearance
+
+The previous homepage declared an SVG logo only. The release renders the existing gold rice mark on its original green field as a stable 96 × 96 PNG, a 16/32/48 ICO, a 180-pixel touch icon and 192/512 manifest icons. The canonical homepage declares the PNG first. Assets use a one-day cache and the manifest uses a one-hour cache. The visual identity and packaging artwork are preserved. [Google favicon guidelines](https://developers.google.com/search/docs/appearance/favicon-in-search)
+
+The canonical homepage already had a single WebSite entity named Hidayeti Pirinç, matching Organization, Open Graph and the homepage title. The visible header and footer now use the same spelling. Catalogue product names retain their existing spellings. Google chooses the displayed site name and favicon. [Google site-name guidelines](https://developers.google.com/search/docs/appearance/site-names)
+
+On 13 November 2026, authenticated URL Inspection confirmed the homepage was on Google. The Performance and Pages reports were still processing, so query, impression, click, CTR, position and indexed-product counts were unavailable there. The earlier Phase 2 URL inspections found no indexed product pages at that time. A separate site-restricted search returned no result in this session, so the displayed site name and globe reported by the owner could not be independently observed. URL Inspection is the indexing evidence. [Search Console](https://search.google.com/search-console?resource_id=sc-domain%3Ahidayetipirinc.com)

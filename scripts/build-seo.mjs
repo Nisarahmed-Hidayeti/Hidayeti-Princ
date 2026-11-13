@@ -61,6 +61,10 @@ function meta({ title, description, route, image = '/assets/seo/hidayeti-basmati
   <meta property="og:locale" content="${locale}">
   <meta property="og:image" content="${esc(absolute(image))}">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
   <script type="application/ld+json">${json({ '@context':'https://schema.org', '@graph':schema })}</script>`;
 }
 function replaceBlock(html, name, content) {
@@ -93,7 +97,6 @@ function page(head, body, analyticsItem = '') {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 ${head}
-  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/seo-pages.css">
   <script defer src="/data/analytics-config.js"></script>
@@ -127,7 +130,8 @@ for (const product of products) {
     : '';
   const description = `${name} ambalajını inceleyin. ${familyNote} Güncel fiyatı WhatsApp üzerinden sorun.`.replace(/ +/g, ' ');
   const schema = { '@type':'Product', name, description:[product.description.tr, familyNote].filter(Boolean).join(". "), image:[absolute(product.image), absolute(product.backImage)], brand:{ '@type':'Brand', name:product.family === 'hidayeti' ? 'Hidayeti Prinç' : 'Buharı Prinç' }, url:absolute(route) };
-  const head = meta({title:name + ' | ' + brand, description, route, image:product.image, schema:[breadcrumb(name,route),schema]});
+  const title = `${name.replace(' Basmati · ', ' Basmati Pirinç ')} | ${brand}`;
+  const head = meta({title, description, route, image:product.image, schema:[breadcrumb(name,route),schema]});
   write(route.slice(1) + 'index.html', page(head, `    <p class="seo-breadcrumb"><a href="/#products">Ürün kataloğu</a> / ${esc(name)}</p>
     <h1>${esc(name)}</h1>
     <div class="seo-product-detail">
@@ -161,7 +165,11 @@ write('toptan-pirinc/index.html', page(meta({
     <h1>${wholesaleTitle}</h1>
     <p>Restoranlar, işletmeler ve toplu alım yapmak isteyenler için Basmati pirinç paketlerini inceleyin. Güncel fiyat, stok, minimum alım miktarı ve teslimat koşullarını ekibimizle görüşebilirsiniz.</p>
     <h2>Toptan teklif nasıl alınır?</h2>
-    <p>İlgilendiğiniz ürünü, paket ağırlığını, ihtiyacınız olan toplam miktarı ve teslimat ilini WhatsApp mesajınıza ekleyin.</p>
+    <ol>
+      <li>Aşağıdan ilgilendiğiniz paketi seçin veya genel teklif bağlantısını açın.</li>
+      <li>Toplam miktarı (kg veya paket adedi) ve teslimat ilini mesaja ekleyin.</li>
+      <li>Güncel fiyatı, stok durumunu ve teslimat koşullarını WhatsApp üzerinden netleştirin.</li>
+    </ol>
     <a class="button button-dark" data-inquiry="wholesale" href="${esc(whatsapp(wholesaleMessage()))}" target="_blank" rel="noopener noreferrer">WhatsApp’tan toptan teklif isteyin</a>
     <h2>Paket seçenekleri</h2>
     <ul class="seo-product-links">${products.map(product => `<li><a class="seo-product-link" data-item-id="${esc(product.id)}" href="${productPath(product)}">${esc(product.name.tr)}</a> · <a data-inquiry="wholesale" data-item-id="${esc(product.id)}" href="${esc(whatsapp(wholesaleMessage(product)))}" target="_blank" rel="noopener noreferrer" aria-label="${esc(product.name.tr + ' için toptan teklif isteyin')}">Teklif isteyin</a></li>`).join('')}</ul>

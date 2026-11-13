@@ -279,7 +279,7 @@
     const mobileToggle = document.getElementById("mobileMenuToggle");
     if (mobileToggle) mobileToggle.setAttribute("aria-label", state.lang === "tr" ? "Menüyü aç" : "Open menu");
     const brandHome = document.querySelector(".header-inner .brand");
-    if (brandHome) brandHome.setAttribute("aria-label", state.lang === "tr" ? "Hidayeti Prinç ana sayfa" : "Hidayeti Prinç home page");
+    if (brandHome) brandHome.setAttribute("aria-label", state.lang === "tr" ? "Hidayeti Pirinç ana sayfa" : "Hidayeti Prinç home page");
     const desktopNav = document.querySelector(".desktop-nav");
     if (desktopNav) desktopNav.setAttribute("aria-label", state.lang === "tr" ? "Ana menü" : "Main navigation");
     const mobileNav = document.getElementById("mobileNav");
