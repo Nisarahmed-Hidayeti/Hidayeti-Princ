@@ -312,7 +312,7 @@
         <p>${escapeHtml(t("packageViewsText"))}</p>
         <div class="dialog-spec"><span>${escapeHtml(t("productWeight"))}</span><strong>${escapeHtml(product.weight)}</strong></div>
         <div class="dialog-spec"><span>${escapeHtml(t("productType"))}</span><strong>${escapeHtml(t("basmatiRice"))}</strong></div>
-        <a class="button button-dark" href="${escapeHtml(waUrl(productMessage(product)))}" target="_blank" rel="noopener noreferrer">${escapeHtml(t("dialogWhatsapp"))} <span aria-hidden="true">↗</span></a>
+        <a class="button button-dark" data-inquiry="product" data-item-id="${escapeHtml(product.id)}" href="${escapeHtml(waUrl(productMessage(product)))}" target="_blank" rel="noopener noreferrer">${escapeHtml(t("dialogWhatsapp"))} <span aria-hidden="true">↗</span></a>
       </div>`;
     if (typeof dialog.showModal === "function") dialog.showModal();
     else dialog.setAttribute("open", "open");

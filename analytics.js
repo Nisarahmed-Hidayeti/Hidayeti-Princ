@@ -26,14 +26,26 @@
   description.textContent = copy.text;
   preferences.append(heading, description);
 
+  const storageConsent = (allowed) => ({
+    analytics_storage: allowed ? "granted" : "denied",
+    ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied"
+  });
+
+  function consentCommand() { window.dataLayer.push(arguments); }
+
   function send() {
     if (consent === "allow") window.dataLayer.push(arguments);
   }
   function enable() {
     window["ga-disable-" + id] = false;
-    if (loaded) return;
+    if (loaded) {
+      consentCommand("consent", "update", storageConsent(true));
+      return;
+    }
     loaded = true;
     window.dataLayer = window.dataLayer || [];
+    consentCommand("consent", "default", storageConsent(false));
+    consentCommand("consent", "update", storageConsent(true));
     send("js", new Date());
     const page = location.origin + location.pathname;
     const referrer = document.referrer ? new URL(document.referrer).origin : "";
@@ -54,7 +66,10 @@
       consent = choice;
       try { localStorage.setItem(key, consent); } catch { /* Keep the choice for this page. */ }
       if (consent === "allow") enable();
-      else window["ga-disable-" + id] = true;
+      else if (loaded) {
+        window["ga-disable-" + id] = true;
+        consentCommand("consent", "update", storageConsent(false));
+      }
       preferences.open = false;
       heading.focus();
     });
@@ -63,15 +78,22 @@
   document.body.append(preferences);
   if (consent === "allow") enable();
   document.addEventListener("click", (event) => {
-    const link = event.target.closest("a[href]");
-    if (!link || consent !== "allow") return;
-    const card = link.closest("[data-product-id]");
-    const item = card?.dataset.productId || document.documentElement.dataset.itemId;
-    if (link.matches(".seo-product-link") && item) send("event", "select_item", { items: [{ item_id: item }] });
-    if (link.hostname === "wa.me") send("event", "whatsapp_click", {
-      inquiry_type: link.dataset.inquiry || (item ? "product" : "general"),
-      ...(item ? { item_id: item } : {})
-    });
-    else if (link.protocol === "tel:" || link.protocol === "mailto:") send("event", "contact_click", { method: link.protocol.slice(0, -1) });
+    if (consent !== "allow") return;
+    const control = event.target.closest("a[href], button[data-details]");
+    if (!control) return;
+    const card = control.closest("[data-product-id]");
+    const item = control.dataset.itemId || card?.dataset.productId || document.documentElement.dataset.itemId;
+    const source_page = location.pathname;
+    if (control.matches(".seo-product-link, button[data-details]") && item) {
+      send("event", "select_item", { source_page, items: [{ item_id: item }] });
+    }
+    if (control.hostname === "wa.me") {
+      const inquiry_type = control.dataset.inquiry || (item ? "product" : "general");
+      const details = { source_page, inquiry_type, ...(item ? { product_id: item } : {}) };
+      send("event", "whatsapp_click", details);
+      if (inquiry_type === "wholesale") send("event", "wholesale_inquiry_click", details);
+    } else if (control.protocol === "tel:" || control.protocol === "mailto:") {
+      send("event", "contact_click", { source_page, method: control.protocol.slice(0, -1) });
+    }
   });
 })();

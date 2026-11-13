@@ -69,7 +69,7 @@ function replaceBlock(html, name, content) {
   return html.replace(pattern, () => `<!-- ${name}:start -->\n${content}\n        <!-- ${name}:end -->`);
 }
 function links(items, lang = 'tr') {
-  return `<ul class="seo-product-links">${items.map(product => `<li><a href="${productPath(product)}"${lang === 'en' ? ' hreflang="tr"' : ''}>${esc(product.name[lang])}</a> — ${esc(product.description[lang])}</li>`).join('')}</ul>`;
+  return `<ul class="seo-product-links">${items.map(product => `<li><a class="seo-product-link" data-item-id="${esc(product.id)}" href="${productPath(product)}"${lang === 'en' ? ' hreflang="tr"' : ''}>${esc(product.name[lang])}</a> — ${esc(product.description[lang])}</li>`).join('')}</ul>`;
 }
 for (const lang of ['tr','en']) {
   const file = lang === 'tr' ? 'index.html' : 'en/index.html';
@@ -121,8 +121,12 @@ function imageMarkup(product, back = false) {
 for (const product of products) {
   const name = product.name.tr;
   const route = productPath(product);
-  const description = `${name}. Ambalajın ön ve arka yüzünü inceleyin. Güncel fiyat, stok ve teslimat bilgisi için WhatsApp’tan ulaşın.`;
-  const schema = { '@type':'Product', name, description:product.description.tr, image:[absolute(product.image), absolute(product.backImage)], brand:{ '@type':'Brand', name:product.family === 'hidayeti' ? 'Hidayeti Prinç' : 'Buharı Prinç' }, url:absolute(route) };
+  const alternatives = products.filter(other => other.family === product.family && other.id !== product.id);
+  const familyNote = alternatives.length
+    ? `Aynı ürün ailesinde ${alternatives.map(other => other.weight).join(' ve ')} seçenekleri de bulunur.`
+    : '';
+  const description = `${name} ambalajını inceleyin. ${familyNote} Güncel fiyatı WhatsApp üzerinden sorun.`.replace(/ +/g, ' ');
+  const schema = { '@type':'Product', name, description:[product.description.tr, familyNote].filter(Boolean).join(". "), image:[absolute(product.image), absolute(product.backImage)], brand:{ '@type':'Brand', name:product.family === 'hidayeti' ? 'Hidayeti Prinç' : 'Buharı Prinç' }, url:absolute(route) };
   const head = meta({title:name + ' | ' + brand, description, route, image:product.image, schema:[breadcrumb(name,route),schema]});
   write(route.slice(1) + 'index.html', page(head, `    <p class="seo-breadcrumb"><a href="/#products">Ürün kataloğu</a> / ${esc(name)}</p>
     <h1>${esc(name)}</h1>
@@ -130,13 +134,22 @@ for (const product of products) {
       <div class="seo-gallery">${imageMarkup(product)}${imageMarkup(product,true)}</div>
       <div>
         <dl class="seo-specs"><div><dt>Pirinç türü</dt><dd>Basmati</dd></div><div><dt>Ambalaj ağırlığı</dt><dd>${esc(product.weight)}</dd></div></dl>
+        ${familyNote ? `<p>${esc(familyNote)}</p>` : ''}
         <p>Güncel fiyat, stok durumu ve teslimat koşullarını öğrenmek için bize yazın.</p>
-        <a class="button button-dark" data-inquiry="product" href="${esc(whatsapp(`Merhaba, ${name} için güncel fiyat, stok ve teslimat bilgisi alabilir miyim?`))}" target="_blank" rel="noopener noreferrer">WhatsApp’tan bilgi alın</a>
+        <a class="button button-dark" data-inquiry="product" href="${esc(whatsapp(`Merhaba, ${name} için güncel fiyat, stok ve teslimat bilgisi alabilir miyim?`))}" target="_blank" rel="noopener noreferrer">WhatsApp’tan fiyat sorun</a>
       </div>
     </div>
     <h2>Diğer Basmati paketleri</h2>
-    ${links(products.filter(other => other.id !== product.id))}
+    ${links(alternatives.concat(products.filter(other => other.family !== product.family)))}
     <p><a href="/toptan-pirinc/">Toptan alım için teklif isteyin</a></p>`, product.id));
+}
+function wholesaleMessage(product) {
+  return [
+    'Merhaba, Hidayeti Pirinç üzerinden toptan Basmati pirinç teklifi almak istiyorum.',
+    'İlgilendiğim ürün: ' + (product?.name.tr || '[ürün / paket]'),
+    'İhtiyacım olan miktar: [miktar]',
+    'Teslimat ili: [il]'
+  ].join('\n');
 }
 const wholesaleTitle = 'Toptan Basmati Pirinç';
 const wholesaleRoute = '/toptan-pirinc/';
@@ -147,11 +160,11 @@ write('toptan-pirinc/index.html', page(meta({
 }), `    <p class="seo-breadcrumb"><a href="/">Ana sayfa</a> / Toptan alım</p>
     <h1>${wholesaleTitle}</h1>
     <p>Restoranlar, işletmeler ve toplu alım yapmak isteyenler için Basmati pirinç paketlerini inceleyin. Güncel fiyat, stok, minimum alım miktarı ve teslimat koşullarını ekibimizle görüşebilirsiniz.</p>
-    <h2>Paket seçenekleri</h2>
-    ${links(products)}
     <h2>Toptan teklif nasıl alınır?</h2>
     <p>İlgilendiğiniz ürünü, paket ağırlığını, ihtiyacınız olan toplam miktarı ve teslimat ilini WhatsApp mesajınıza ekleyin.</p>
-    <a class="button button-dark" data-inquiry="wholesale" href="${esc(whatsapp('Merhaba, Basmati pirinç için toptan fiyat teklifi almak istiyorum. Paket seçenekleri, minimum alım ve teslimat koşulları hakkında bilgi verebilir misiniz?'))}" target="_blank" rel="noopener noreferrer">WhatsApp’tan toptan teklif isteyin</a>
+    <a class="button button-dark" data-inquiry="wholesale" href="${esc(whatsapp(wholesaleMessage()))}" target="_blank" rel="noopener noreferrer">WhatsApp’tan toptan teklif isteyin</a>
+    <h2>Paket seçenekleri</h2>
+    <ul class="seo-product-links">${products.map(product => `<li><a class="seo-product-link" data-item-id="${esc(product.id)}" href="${productPath(product)}">${esc(product.name.tr)}</a> · <a data-inquiry="wholesale" data-item-id="${esc(product.id)}" href="${esc(whatsapp(wholesaleMessage(product)))}" target="_blank" rel="noopener noreferrer" aria-label="${esc(product.name.tr + ' için toptan teklif isteyin')}">Teklif isteyin</a></li>`).join('')}</ul>
     <p>Telefon <a href="tel:+${esc(config.whatsappNumber)}">+${esc(config.whatsappNumber)}</a> · E-posta <a href="mailto:${esc(config.email)}">${esc(config.email)}</a></p>`));
 
 for (const name of existsSync(path('urunler')) ? readdirSync(path('urunler'), { withFileTypes:true }) : []) {
